@@ -98,6 +98,8 @@ von Ladungsträgern im Halbleiter mit dem Haynes-Shockley-Experiment und in \tex
 
 Dieser Teil orientiert sich an [].
 
+
+
 \subsection{Interferenz von Photonen, optisches Gitter}
 
 Trifft eine ebene Welle auf einen Spalt, so ist nach dem Huygene'schen Prinzip jeder Punkt der Wellenfront Ausgangspunkt einer Elementarwelle, wobei sich die neue Wellenfront durch Überlagerung sämtlicher Elementarwellen ergibt. Trifft eine ebene Welle auf mehrere Spalte, ein optisches Gitter, beobachtet man hinter dem Gitter Interferenz, ein charakteristisches Wellenphänomen.  Ist der Gangunterschied zweier Wellen ein ganzzahliges Vielfaches ihrer Wellenlänge kommt es zur konstruktiven Interferenz, ist der Gangunterschied ein ungerades, halbzahliges Vielfaches der Wellenlänge kommt es zur destruktiven Interferenz. Es gilt also folgender Zusammenhang für die konstruktive Interferenz am Gitter:
@@ -111,6 +113,9 @@ Man unterscheidet zwei Arten von optischen Gittern: Transmissionsgitter und Refl
 \[E(\varphi)=\frac{hc}{2d\sin(\varphi)cos(\frac{\psi}{2})}\]
 
 In 4.1 wird genauer erklärt wie sich ein optisches Gitter so als Spektrometer verwenden lässt.
+
+\subsection{Halbleiter}
+
 \subsection{Das Bändermodell}
 
 Bei einem einzelnen Atome sind die Energieniveaus der Elektronen diskret. Nähert man nun zwei Atome so nah an, dass sich ihre Orbitale überlappen, müssen sich die Energieniveaus gemäß dem Pauliprinzip aufspalten. In einem Kristall wechseln nun der Art viele Atome miteinander, dass auf diese Art und Weise Energiebänder enstehen (s. Abbildung ). Das energetisch höchste Band, das im Grundzustand besetztist heißt Valenzband, das erste unbesetzte Band heißt Leitungsband. Der Energieabstand zwischen diesen beiden Bändern wird als Bandlücke bezeichnet. Bei $T = 0$K ist das Valenzband voll besetzt während im Leitungsband keine Ladungsträger sind. Durch Anlegen einer Spannung oder Absorption von Photonen können Elektronen jedoch in das Leiterband gelangen. 
@@ -130,33 +135,109 @@ Normalerweise geht ein Halbleiteratom Bindungen mit vier Nachbaratomen ein. Bei 
 Oft wird diese Verunreinigung absichtlich vorgenommen (typischerweise ca. 1 Fremdatom auf $10^6$Atome), da sie sich positiv auf die Leitfähigkeit des Halbleiters auswirken kann. Diesen Vorgang nennt man Dotierung. Donatoren-Halbleiter nennt man n-Typ, Akzeptor-Halbleiter heißen p-Typ.
 \subsection{Halbleiter-Diode}
 
+Bringt man eine Schicht n-Typ-Halbleiter und eine Schicht p-Typ-Halbleiter zusammen, spricht man von einer Diode. Die quasie-freien Ladungsträger der n-Typ-Schicht, d.h. die Elektronen, diffundieren in die freien Löcher der p-Typ-Schicht. Im Übergangsbereich löschen sich die freien Ladungsträger also durch diesen Vorgang aus. 
+Nach diesem Diffusionsprozess bleiben in der n-Typ-Schicht positiv geladene Ionen und in der p-Typ-Schicht negativ geladene Ionen zurück (Verarmungszone), die sich nicht frei bewegen können, da sie in die Gitterstruktur des Kristalls fest eingebunden sind. Es ensteht so ein elektrisches Feld (Kontakt-Potential mit Spannung $U_{bi}$). 
+
+Durch Anlegen einer äußeren Spannung bei der der positive Pol an die n-Schicht angeschlossen wird, und der negative Pol an die p-Schicht vergrößert sich die Verarmungszone und die Ladungsträger müssen ein größeres Spannungsgefälle überwinden: die Diode ist in Sperrrichtung gepolt. Bei Anlegung einer äußeren Spannung mit umgekehrter Polung können die überschüssigen Elektronen in der p-Schicht problemlos zum positiven Pol wandern, die Diode ist dann in Durchlassrichtung gepolt.
+Dies bildet die Grundlage für Halbleiterdetektoren. Die Grundidee von Halbleiterdetektoren ist gerade eine Halbleiterdiode in einen Stromkreis einzubinden.
 \subsection{Wechselwirkung von Strahlung mit Materie}
 
 Die Wechselwirkung von Strahlung mit Materie wird im Wesentlichen durch drei verschiedene Effekte beschrieben: \textbf{Photoeffekt}, \textbf{Comptoneffekt} und \textbf{Paarbildung}.
 Der Effekt der Paarbildung tritt für Energien über $1,022$ MeV auf, die in diesen Versuchen nicht erreicht werden, sodass wir diesen Effekt hier nicht weier erläutern.
 
-\paragraph{Photoeffekt}
+\paragraph{Photoeffekt} Man unterscheidet beim Photoeffekt zwischen innerem und äußerem Photoeffekt.
+Beim Photoeffekt dringt ein Photon in das Atom ein und überträgt seine gesamte Energie an ein Elektron der inneren Schalen. Dabei wird Energie auf dieses Elektron übertragen. Ist die Energie des Photons größer als die Bindungsenergie des Elektrons wird es aus der Atomhülle befreit und erhält kinetische Energie. Die hier entstandene Lücke wird über Abstrahlung eines $\gamma$-Quants oder eines Auger-Elektrons wieder gefüllt. Man spricht vom äußeren Photoeffekt.
+Beim inneren Photoeffekt treffen Photonen mit einer Energie  $\geq E_g$ auf ein Elektron, und heben dieses vom Valenzband in das Leiterband. Hier durch wird die Leitfäjigkeit des Halbleiters erhöht.
+\paragraph{Comptoneffekt} Beim Compton-Effekt trifft ein einfallendes Photon auf ein freies oder nur leicht gebundenes Elektron und überträgt einen Teil seiner Energie bzw. seines Impulses auf dieses und verliert selber an Energie in dem die Wellenlänge erhöht wird. Die Stärke dieses Effektes hängt vom Emissionswinkel ab, gestreute Photonen können weiter mit anderen Elektronen wechselwirken, beispielsweise in Form des inneren Photoeffekts. Dieser Prozess findet meist bei Energien zwischen $200$ keV und $5$ MeV statt.
 
-\paragraph{Comptoneffekt}
+Trifft hochenergetische Strahlung, z.B. in Form eines Lasers, auf einen Halbleiter, ensteht durch die oben beschriebenen Effekte eine Ladungsträgerwolke.
+
+In Materie fällt die Intensität $I_d$ der $\gamma$-Strahlung exponentiell mit der Strecke $d$ ab:
+\[I_d=e^{\mu d}\]
+Dabei ist $\mu$ der Absorptionskoeffizent des Materials und $I_0$ die Anfangsintensität.
+
 \subsection{Theorie zum Haynes-Shockley Experiment}
 
+Im zweiten Veruchsteil des Experiments wird ein Laserpuls auf eine Germaniumprobe geschossen, wodurch eine Ladungswolke ensteht.Um das Verhalten dieser Ladungsträgerwolke zu beschreiben stellen wir folgende Überlegungen an: Aus der Kontinuitätsgleichung $\vec{\nabla}\vec{j}+\dot{n}=0$ und zusätzlichen Rekombinationen (siehe \cite{staat}), ergibt sich:
+\begin{align*}
+&\frac{\partial n}{\partial t}=-\vec{\nabla}\vec{j_n}\frac{n-n_o}{\tau_n}=\vec{E}\mu_n\vec{\nabla}n+D_n\triangle n-\frac{n-n_o}{\tau_n}&\mbox{(analog für die Löcher)}
+\end{align*}
+wobei  $\tau_n$ die  Rekombinationszeit ist und $n_0,p_0$ sind die Grundkonzentrationen, für die gilt: $n(\vec{x})=n_0+\bar{n}(\vec{x})$
 
+Diese Differentialgleichung ist gekoppelt. Wir vereinfachen sie daher durch Einfhren allgemeiner Größen zu einer entkoppelten DGL:
+\[\frac{\partial c}{\partial t}=\mu\vec{E}\cdot\nab c+D\triangle c-\frac{c-c_0}{\tau}\]
+wobei :
+\begin{itemize}
+	\item $c=$  ambipolare Ladungsträgerdichte.
+	\item $c_0=$  Grundkonzentration von $c$.
+	\item $D=$  Diffusionskonstante.
+	\item $\mu=$ Beweglichkeit.
+\end{itemize}
+Man kann zeigen, dass folgende Funktion diese Differenzialgleichung löst:
+\[c(x,t)=Ce^{-\frac{t}{\tau_n}}\frac{1}{\sqrt{4\pi D_n t}}e^{-\frac{(x-\mu_n E t)^2}{4D_n t}}\]
+Bei genauerem Hinsehen erkennt man schnell, dass es sich im Wesentlichen um eine Gaußfunktion handelt. Es macht daher Sinn, für die Auswertung dieses Versuchsteils Fit-Funktionen folgender Form zu verwenden:
+\[c(x,t)=A(t)\cdot\frac{1}{\sqrt{2\pi\sigma^2}}\cdot e^{-\frac{(x-x_c(t))^2}{2\sigma^2}}\]
+
+mit:
+\begin{itemize}
+	\item $A(t)=Ce^{-\frac{t}{\tau_n}}$
+	\item $x_c(t)=\mu_n E t$
+	\item $\sigma(t)=\sqrt{2 D_n t}$
+\end{itemize}
 
  
 \newpage
 \section[Versuchsaufbau- und Durchführung]{Versuchsaufbau- und Durchführung} 
 
 
+\subsection{Teil I}
 
 
+\gra{TeilI_Aufbau}{Versuchsaufbau Teil I: Messen der Bandlückenenergie}
 
+Abbildung [] zeigt den schematischen Versuchsaufbau des Versuchs. Am Anfang des Strahlengangs steht eine Lampe als Strahlungsquelle, die weißes Licht
 
+\subsection{Teil II}
 
+\subsubsection{Versuchsaufbau}
 
- 
+\gra{TeilII_Aufbau}{Versuchsaufbau Teil II: Bewegung der Ladungsträgerwolke}
 
+In Abbildung [] ist der Versuchsaufbau zum Haynes-Shockley-Versuch zu sehen. Licht eines gepulstes Lasers wird hier durch ein Glasfaserkabel auf eine Germaniumprobe ($40\times 40\times 300\mathrm{mm}^3$, p-dotiert) geleitet.  Hierdurch ensteht eine Ladungsträgerwolke, welche durch die angelegte Spannung $U$ durch den Halbleiter wandert. Wir beobachten diese Wolke mit Hilfe eines Oszilloskops und einer Sonde.
+Um ordentlich messen zu können, ist es erforderlich, dass die Frequenz des gepulsten Lasers und die des Oszilloskops synchronisiert sind, was über die Verbindung des Trigger-Eingangs des Oszilloskops mit dem Laser bezweckt wird.
 
+Da die Probe wieder abkühlen muss, ist die Spannung $U$ nicht konstant. Viel mehr werden $98\%$ der Zeit einer Periode für das Abkühlen der Probe verwendet während der eigentliche Prozess in den restlichen $2\%$ der Zeit stattfindet.
+Da die Treiberspannung deutlich größer ist als die Ladungsträgerspannung, muss diese mit einem \glqq shifted output\grqq\ herausgefiltert werden.
 
+\subsubsection{Versuchsdurchführung}
+
+In diesem Teil werden zwei verschiedene Messreihen aufgenommen. In einer ersten Messreihe wird der Abstand zwischen Lichtkabel und Nadel variiert, während die Spannung konstant bleibt. Es werden zehn Messungen für Abstände zwischen ca. $2-10$ mm durchgeführt. In einer zweiten Messreihe wird nun bei einem konstanten Abstand von ca. $4$ mm (inklusive Offset) die angelegte Spannung variiert. Hier werden elf Messungen für Spannungen zwischen $20$ V und $50$ V vorgenommen. Beide Messreihen sollten Messpunkte in möglichst regelmäßigen Abständen enthalten.
+\subsection{Teil III} 
+
+\subsubsection{Aufbau}
+\gra{TeilIII_Aufbau}{Versuchsaufbau Teil III: Halbleiterdetektoren}
+
+Kernstück dieses Versuchsaufbaus ist der Halbleiterdetektor. Es stehen für diesen Versuchsteil zwei verscheidene Halbleiterdetektoren zur Verfügung:
+
+\begin{itemize}
+	\item Eine $n-n^+$-Silizium-Diode
+	\item Ein CdTe-Kristall
+\end{itemize} 
+
+Es werden mit beiden Halbleiterdetektoren je die Spektren von  $^{57}$Co und $^{241}$Am aufgenommen. Durch Einstellen einer festen Messdauer wird eine einheitliche Normierung auf eine feste Messdauer überflüssig. \\
+Trifft ein durch den Zerfall enstehendes $\gamma$-Quant auf den Halbleiter, so kann es seine Energie durch den Photoeffekt bzw. den Comptoneffekt ganz oder teilweise auf ein Elektron übertragen, welches so vom Valenzband in das Leiterband gehoben werden kann. Dieses kann durch Stöße seine Energie an weitere Elektronen übertragen. Die Anzahl der zusätzlichen Ladungsträger ist dabei proportional zur Ursprungsenergie des Photons.
+Durch Anlegen einer Spannung kann so ein Strompuls gemessen werden. Dieser Strompuls wird vom Vorverstärker in einen Spannungssignal umgewandelt. Dieses Spannungssignal führt dann zum Aufladen eines Kondensator im Shaping Amplifier. Nachdem sich dieser wiederum über einen Widerstand entladen hat, wird das Signal über zwei RC-Filter gedämpft. Man erhält so einen scharfen Spannungspeak dessen Amplitude weiter proportional zur Ursprungsenergie des Photons ist. Der Multi Channel Analyzer ordnet damit verschiedene Energien den verschiedenen Channels zu und leitet dies an den Computer weiter mit dem wir nun schließlich Zerfallspektren aufzeichnen können.
+
+\subsubsection{Durchführung}
+
+Der Halbleiterdetektor wird in den vorgesehenen Kasten eingebaut und die radioaktive Probe daraufgestellt. Mit dem Computer-Programm ADMCA werden die Zerfalls-Spektren aufgenommen. Es werden vier Messungen durchgeführt mit einer Messzeit von jeweils einer Stunde:
+
+\begin{itemize}
+	\item Spektrum von $^{57}$Co mit Si-Detektor
+	\item Spektrum von $^{57}$Co  CdTe-Detektor
+	\item Spektrum von $^{241}$Am  mit Si-Detektor
+	\item Spektrum von $^{241}$Am mit CdTe-Detektor
+\end{itemize} 
 
 
 \newpage
