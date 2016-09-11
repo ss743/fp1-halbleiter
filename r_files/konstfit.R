@@ -28,8 +28,7 @@ konstfit <- function(input){
   einheit=c(1:n)/c(1:n)
   a=sqrt(1/((n-1))*sum((input$y-mw*einheit)^2))
   
-  print(mw)
-  
+
   return(c(mw,a))
   
 }
