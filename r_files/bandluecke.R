@@ -26,7 +26,9 @@ si_lampe = subset(si_lampe,E>-3 & E<3)
 
 par(mfrow=c(1,1))
 
-
+ ##############################
+ # Berechnen der Fehlerbalken #
+ ##############################
 x=ge_fehler$t
 y1=ge_fehler$U_pyro
 y2=ge_fehler$U_sample
@@ -44,6 +46,9 @@ abline(a=ge_fehler_sample[1], b=0,col="red")
 ge_pyro_err=ge_fehler_pyro[2]
 ge_samp_err=ge_fehler_sample[2]
 
+ #############################
+ # Berechnen des Untergrunds #
+ #############################
 x=ge_untergrund$t
 y1=ge_untergrund$U_pyro
 y2=ge_untergrund$U_sample
@@ -59,21 +64,20 @@ ge_untergrund_sample=konstfit(ge_untergrund_sample_data)
 abline(a=ge_untergrund_pyro[1], b=0,col="blue")
 abline(a=ge_untergrund_sample[1], b=0,col="red")
 
+ ############################
+ # Plot des Lampenspektrums #
+ ############################
 x=ge_lampe$E
 y1=ge_lampe$U_pyro
-#y2=ge_lampe$U_sample
 sy1=ge_pyro_err
-#sy2=ge_samp_err
 lim=c(min(y1),max(y1))
 plot(x,y1,type="p",pch=4,xlab="E",ylab="U",cex=0.6,bty="l",col="blue",ylim=lim)
 with(data=data.frame(x=x,y=y1,sy=sy1),expr=Hmisc::errbar(x,y,y+sy,y-sy,add=T,pch=4,type="n"))
-#points(x,y2,type="p",pch=4,cex=0.6,bty="l",col="red")
-#with(data=data.frame(x=x,y=y2,sy=sy2),expr=Hmisc::errbar(x,y,y+sy,y-sy,add=T,pch=4,type="n"))
 grid()
 
-##################################
-# Umrechnung des Lampenspektrums #
-##################################
+ ##################################
+ # Umrechnung des Lampenspektrums #
+ ##################################
 lampe_alt=ge_lampe
 material=germanium
 
@@ -81,7 +85,9 @@ source("lampe.R")
 
 ge_lampe=lampe
 
-
+ ###########################
+ # Umrechnung der Spektren #
+ ###########################
 x=germanium$E
 y1_ol=germanium$U_pyro-ge_untergrund_pyro[1]
 y1=y1_ol/ge_lampe$U
@@ -99,6 +105,9 @@ points(x,y2,type="p",pch=4,xlab="E",ylab="U",cex=0.6,bty="l",col="red")
 with(data=data.frame(x=x,y=y2,sy=sy2),expr=Hmisc::errbar(x,y,y+sy,y-sy,add=T,pch=4,type="n"))
 grid()
 
+ ######################################################
+ # Berechnung des Schnittpunktes im negativen Bereich #
+ ######################################################
 lim=c(0,0.6)
 x_lim=c(-0.8,-0.5)
 plot(x,y1,type="p",pch=4,xlab="E",ylab="U",cex=0.6,bty="l",col="blue",ylim=lim,xlim=x_lim)
@@ -124,6 +133,9 @@ errorschnitt1=sqrt((fit1[3]^2+fit2[3]^2)/(fit1[1]-fit2[1])^2+(fit1[4]^2+fit2[4]^
 lines(blueline,col="blue",xlim=grenzen1)
 lines(redline,col="red",xlim=grenzen2)
 
+ ######################################################
+ # Berechnung des Schnittpunktes im positiven Bereich #
+ ######################################################
 lim=c(0,0.7)
 x_lim=c(0.5,0.8)
 plot(x,y1,type="p",pch=4,xlab="E",ylab="U",cex=0.6,bty="l",col="blue",ylim=lim,xlim=x_lim)
@@ -149,6 +161,9 @@ errorschnitt2=sqrt((fit1[3]^2+fit2[3]^2)/(fit1[1]-fit2[1])^2+(fit1[4]^2+fit2[4]^
 lines(blueline,col="blue",xlim=grenzen1)
 lines(redline,col="red",xlim=grenzen2)
 
+ ######################################
+ # Gewichtetes Mittel aus den Punkten #
+ ######################################
 schnittpunkt=(schnittpunkt1/errorschnitt1^2+schnittpunkt2/errorschnitt2^2)/(1/errorschnitt1^2+1/errorschnitt2^2)
 errorschnitt=sqrt(1/(1/errorschnitt1^2+1/errorschnitt2^2))
 
@@ -164,6 +179,10 @@ cat("eV")
 ############
 
 par(mfrow=c(1,2))
+
+ ##############################
+ # Berechnen der Fehlerbalken #
+ ##############################
 x=si_fehler$t
 y1=si_fehler$U_pyro
 y2=si_fehler$U_sample
@@ -198,6 +217,9 @@ si_samp_err=(si_fehler_sample[2]+si_fehler_sample2[2])/2
 
 par(mfrow=c(1,1))
 
+ #############################
+ # Berechnen des Untergrunds #
+ #############################
 x=si_untergrund$t
 y1=si_untergrund$U_pyro
 y2=si_untergrund$U_sample
@@ -213,21 +235,20 @@ si_untergrund_sample=konstfit(si_untergrund_sample_data)
 abline(a=si_untergrund_pyro[1], b=0,col="blue")
 abline(a=si_untergrund_sample[1], b=0,col="red")
 
+ ############################
+ # Plot des Lampenspektrums #
+ ############################
 x=si_lampe$E
 y1=si_lampe$U_pyro
-#y2=si_lampe$U_sample
 sy1=si_pyro_err
-#sy2=si_samp_err
 lim=c(min(y1),max(y1))
 plot(x,y1,type="p",pch=4,xlab="E",ylab="U",cex=0.6,bty="l",col="blue",ylim=lim)
 with(data=data.frame(x=x,y=y1,sy=sy1),expr=Hmisc::errbar(x,y,y+sy,y-sy,add=T,pch=4,type="n"))
-#points(x,y2,type="p",pch=4,cex=0.6,bty="l",col="red")
-#with(data=data.frame(x=x,y=y2,sy=sy2),expr=Hmisc::errbar(x,y,y+sy,y-sy,add=T,pch=4,type="n"))
 grid()
 
-##################################
-# Umrechnung des Lampenspektrums #
-##################################
+ ##################################
+ # Umrechnung des Lampenspektrums #
+ ##################################
 lampe_alt=si_lampe
 material=silizium
 
@@ -235,7 +256,9 @@ source("lampe.R")
 
 si_lampe=lampe
 
-
+ ###########################
+ # Umrechnung der Spektren #
+ ###########################
 x=silizium$E
 y1_ol=silizium$U_pyro-si_untergrund_pyro[1]
 y1=y1_ol/si_lampe$U
@@ -253,6 +276,9 @@ points(x,y2,type="p",pch=4,xlab="E",ylab="U",cex=0.6,bty="l",col="red")
 with(data=data.frame(x=x,y=y2,sy=sy2),expr=Hmisc::errbar(x,y,y+sy,y-sy,add=T,pch=4,type="n"))
 grid()
 
+ ######################################################
+ # Berechnung des Schnittpunktes im negativen Bereich #
+ ######################################################
 lim=c(0,6)
 x_lim=c(-1.3,-1)
 plot(x,y1,type="p",pch=4,xlab="E",ylab="U",cex=0.6,bty="l",col="blue",ylim=lim,xlim=x_lim)
@@ -278,6 +304,9 @@ errorschnitt1=sqrt((fit1[3]^2+fit2[3]^2)/(fit1[1]-fit2[1])^2+(fit1[4]^2+fit2[4]^
 lines(blueline,col="blue",xlim=grenzen1)
 lines(redline,col="red",xlim=grenzen2)
 
+ ######################################################
+ # Berechnung des Schnittpunktes im positiven Bereich #
+ ######################################################
 lim=c(0,20)
 x_lim=c(1,1.2)
 plot(x,y1,type="p",pch=4,xlab="E",ylab="U",cex=0.6,bty="l",col="blue",ylim=lim,xlim=x_lim)
@@ -303,6 +332,9 @@ errorschnitt2=sqrt((fit1[3]^2+fit2[3]^2)/(fit1[1]-fit2[1])^2+(fit1[4]^2+fit2[4]^
 lines(blueline,col="blue",xlim=grenzen1)
 lines(redline,col="red",xlim=grenzen2)
 
+ ######################################
+ # Gewichtetes Mittel aus den Punkten #
+ ######################################
 schnittpunkt=(schnittpunkt1/errorschnitt1^2+schnittpunkt2/errorschnitt2^2)/(1/errorschnitt1^2+1/errorschnitt2^2)
 errorschnitt=sqrt(1/(1/errorschnitt1^2+1/errorschnitt2^2))
 

@@ -20,6 +20,7 @@
 \usepackage{titling}
 
 
+
 \lstset{basicstyle=\scriptsize,breaklines=true} %Quellcode mit Umlauten und ganz klein
 
 \lstset{literate=
@@ -70,7 +71,16 @@
 	\end{minipage}
 	\vskip 30 pt
 	}
-
+\newcommand{\graTwo}[4][0.5]{
+	\begin{minipage}[h!]{\textwidth}
+		\centering
+		\includegraphics[width=#1\textwidth]{figures/#2.png}
+		\includegraphics[width=#1\textwidth]{figures/#3.png}
+		\captionof{figure}{#4}
+	\end{minipage}
+	\vskip 30 pt
+}
+\newcommand{\code}[1]{\texttt{#1}}
 
 %Titel,Inhalt----------------------------------------------------------------------------------------------------------
 
@@ -242,7 +252,33 @@ Der Halbleiterdetektor wird in den vorgesehenen Kasten eingebaut und die radioak
 
 \newpage
 \section{Auswertung}
+\subsection{Berechnen der Bandlückenenergien}
+\graTwo[0.49]{bandluecke_ge_untergrund}{bandluecke_si_untergrund}{Untergrundmessung von a) Germanium und b) Silizium\label{untergrund}}
+Zum Berechnen der Bandlückenenergien müssen wir zunächst den Untergrund von den gemessenen Spektren abziehen und diesen auf die Strahlungsleistung der Lampe normieren. Dafür benutzen wir folgende Rechnungen (\ref{srcbandluecke}):
+\begin{align*}
+	\text{Trans}_{\text{real}}&=\frac{\text{Trans}-\text{Untergrund}_{\text{Trans}}}{\text{Lampe}}\\
+	\text{Abs}_{\text{real}}&=\frac{\text{Abs}-\text{Untergrund}_{\text{Abs}}}{\text{Lampe}}
+\end{align*}
+\graTwo[0.49]{bandluecke_ge_fehler}{bandluecke_si_fehler}{Messung zur Berechnung der Fehler von a) Germanium und b) Silizium\label{fehler}}
+Als Untergrund verwenden wir den Mittelwert unserer gemessenen Untergrundwerte und den statistischen Fehler als Unsicherheit des Untergrundes (siehe Abbildung \ref{untergrund}). Aus unserer Fehlermessung (siehe Abbildung) erhalten wir die Unsicherheiten auf die gemessenen Spektren und auf das Lampenspektrum. Mit Gauß'scher Fehlerfortpflanzung erhalten wir nun die Fehler auf die realen Spektren (\ref{srcbandluecke}):
+\begin{align*}
+	s_{T,r}&=\text{Trans}_{\text{real}}\cdot\sqrt{\frac{s_T^2+s_{U,T}^2}{(\text{Trans}-\text{Untergrund}_{\text{Trans}})^2}+\frac{s_T^2}{\text{Lampe}^2}}\\
+	s_{A,r}&=\text{Abs}_{\text{real}}\cdot\sqrt{\frac{s_A^2+s_{U,A}^2}{(\text{Abs}-\text{Untergrund}_{\text{Abs}})^2}+\frac{s_T^2}{\text{Lampe}^2}}
+\end{align*}
+Bei der Normierung auf die Strahlungsleistung stießen wir auf das Problem, dass die Datensätze der unterschiedlichen Spektren unterschiedliche x-Werte (Energie-Werte) hatten und wir die Spektren deshalb nicht direkt dividieren konnten. Also mussten wir das Spektrum der Messung der Lampenleistung auf die x-Werte der gemessenen Absorptions- und Transmissionsspektren umrechnen. Dies geschieht im Skript \code{lampe.R} (siehe \ref{srclampe}). Dazu suchen wir zu jedem x-Wert der Absorptions- und Transmissionsspektren den jeweils nächsten x-Wert des Lampenspektrums in positiver und in negativer x-Richtung und machen eine lineare Extrapolation aus den dazugehörigen y-Werten.
 
+In den Abbildungen \ref{spektrumge} und \ref{spektrumsi} sieht man nun die bereinigten und normierten Spektren von Germanium und Silizium. Nun betrachten wir die negativen und positiven Bereiche rund um die Schnittpunkte der beiden Verläufe und berechnen die Schnittpunkte, um aus dem Betrag des x-Wertes die Bandlückenenergie zu erhalten (siehe Abbildungen \ref{speknahge} und \ref{speknahsi}).
+
+Anschließend berechnen wir aus den errechneten Werten für die Bandlückenenergie aus dem positiven und dem negativen Bereich den gewichteten Mittelwert. Eine etwaige Verschiebung des Nullpunkts wird durch die Mittelung der beiden Werte eliminiert.
+
+\paragraph{Bandlückenenergie von Germanium}
+Die von uns berechnete Bandlückenenergie von Germanium beträgt: $E_{\text{Ge}}=0.68\pm0.05 \text{ eV}$
+\paragraph{Bandlückenenergie von Silizium}
+Die von uns berechnete Bandlückenenergie von Silizium beträgt: $E_{\text{Si}}=1.09\pm0.04 \text{ eV}$\\
+\gra[0.7]{bandluecke_ge_spektrum}{Reales Spektrum von Germanium \label{spektrumge}}
+\gra[0.7]{bandluecke_si_spektrum}{Reales Spektrum von Silizium \label{spektrumsi}}
+\graTwo[0.49]{bandluecke_ge_negativ}{bandluecke_ge_positiv}{Nahaufnahmen des Germanium-Spektrums im a) negativen und b) positiven Bereich\label{speknahge}}
+\graTwo[0.49]{bandluecke_si_negativ}{bandluecke_si_positiv}{Nahaufnahmen des Silizium-Spektrums im a) negativen und b) positiven Bereich\label{speknahsi}}
 
 
 \newpage
@@ -257,8 +293,18 @@ Der Halbleiterdetektor wird in den vorgesehenen Kasten eingebaut und die radioak
 \newpage
 \section{Anhang}
 
+\subsection{Sourcecode}
+\subsubsection{bandluecke.R}\label{srcbandluecke}
+\lstinputlisting[language=R]{r_files/bandluecke.R}
+\subsubsection{lampe.R}\label{srclampe}
+\lstinputlisting[language=R]{r_files/lampe.R}
+\subsubsection{linearfit.R}\label{srclinearfit}
+\lstinputlisting[language=R]{r_files/linearfit.R}
+\subsubsection{konstift.R}\label{srckonstfit}
+\lstinputlisting[language=R]{r_files/konstfit.R}
 
-
+%\subsection{Einhorn}
+%\gra[1]{Einhorn}{Ein Einhorn}
 
 
 
