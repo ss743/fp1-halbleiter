@@ -106,29 +106,31 @@ von Ladungsträgern im Halbleiter mit dem Haynes-Shockley-Experiment und in \tex
 \newpage
 \section[Theoretische Grundlagen]{Theoretische Grundlagen}
 
-Dieser Teil orientiert sich an [].
+Dieser Teil orientiert sich an \cite{staat}.
 
 
 
 \subsection{Interferenz von Photonen, optisches Gitter}
 
-Trifft eine ebene Welle auf einen Spalt, so ist nach dem Huygene'schen Prinzip jeder Punkt der Wellenfront Ausgangspunkt einer Elementarwelle, wobei sich die neue Wellenfront durch Überlagerung sämtlicher Elementarwellen ergibt. Trifft eine ebene Welle auf mehrere Spalte, ein optisches Gitter, beobachtet man hinter dem Gitter Interferenz, ein charakteristisches Wellenphänomen.  Ist der Gangunterschied zweier Wellen ein ganzzahliges Vielfaches ihrer Wellenlänge kommt es zur konstruktiven Interferenz, ist der Gangunterschied ein ungerades, halbzahliges Vielfaches der Wellenlänge kommt es zur destruktiven Interferenz. Es gilt also folgender Zusammenhang für die konstruktive Interferenz am Gitter:
+Trifft eine ebene Welle auf einen Spalt, so ist nach dem Huygene'schen Prinzip jeder Punkt der Wellenfront Ausgangspunkt einer Elementarwelle, wobei sich die neue Wellenfront durch Überlagerung sämtlicher Elementarwellen ergibt. Trifft eine ebene Welle auf mehrere Spalte, ein optisches Gitter, beobachtet man hinter dem Gitter Interferenz, ein charakteristisches Wellenphänomen.  Ist der Gangunterschied zweier Wellen ein ganzzahliges Vielfaches ihrer Wellenlänge kommt es zur konstruktiven Interferenz, ist der Gangunterschied ein ungerades, halbzahliges Vielfaches der Wellenlänge kommt es zur destruktiven Interferenz. Es gilt folgender Zusammenhang für die konstruktive Interferenz am Gitter:
 
 \begin{align*}
 & n\cdot\lambda=d\cdot\sin(\theta)
 \end{align*}
 Hierbei ist $n$ die Beugungsordnung, $\theta$ der Einfallswinkel, $\lambda$ die Wellenlänge und $d$ der Spaltabstand.
-Man unterscheidet zwei Arten von optischen Gittern: Transmissionsgitter und Reflexionsgitter; Transmissionsgitter bestehen aus parallelen Spalten, Reflexionsgitter aus reflektierenden Graten. Hier handelt es sich um ein Reflexionsgiterr. Wir betrachten nun nur die erste Beugungsordnung. Für verschiedene Anstellwinkel des optischen Gitters ergibt sich dann die Energien der Photonen zu:
+Man unterscheidet zwei Arten von optischen Gittern: Transmissionsgitter und Reflexionsgitter; Transmissionsgitter bestehen aus parallelen Spalten, Reflexionsgitter aus reflektierenden Graten. Hier handelt es sich um ein Reflexionsgiterr. Wir betrachten nun nur die erste Beugungsordnung. Für verschiedene Anstellwinkel des optischen Gitters ergibt sich die Energien der Photonen zu:
 
 \[E(\varphi)=\frac{hc}{2d\sin(\varphi)cos(\frac{\psi}{2})}\]
 
-In 4.1 wird genauer erklärt wie sich ein optisches Gitter so als Spektrometer verwenden lässt.
+In \ref{4.1} wird genauer erklärt wie sich ein optisches Gitter so als Spektrometer verwenden lässt.
 
 \subsection{Halbleiter}
 
 \subsection{Das Bändermodell}
 
-Bei einem einzelnen Atome sind die Energieniveaus der Elektronen diskret. Nähert man nun zwei Atome so nah an, dass sich ihre Orbitale überlappen, müssen sich die Energieniveaus gemäß dem Pauliprinzip aufspalten. In einem Kristall wechseln nun der Art viele Atome miteinander, dass auf diese Art und Weise Energiebänder enstehen (s. Abbildung ). Das energetisch höchste Band, das im Grundzustand besetztist heißt Valenzband, das erste unbesetzte Band heißt Leitungsband. Der Energieabstand zwischen diesen beiden Bändern wird als Bandlücke bezeichnet. Bei $T = 0$K ist das Valenzband voll besetzt während im Leitungsband keine Ladungsträger sind. Durch Anlegen einer Spannung oder Absorption von Photonen können Elektronen jedoch in das Leiterband gelangen. 
+Bei einem einzelnen Atome sind die Energieniveaus der Elektronen diskret. Nähert man nun zwei Atome so nah an, dass sich ihre Orbitale überlappen, müssen sich die Energieniveaus gemäß dem Pauliprinzip aufspalten. In einem Kristall wechseln nun der Art viele Atome miteinander, dass auf diese Art und Weise Energiebänder enstehen (s. Abbildung \ref{Bandlucke}). Das energetisch höchste Band, das im Grundzustand besetztist heißt Valenzband, das erste unbesetzte Band heißt Leitungsband. Der Energieabstand zwischen diesen beiden Bändern wird als Bandlücke bezeichnet. Bei $T = 0$K ist das Valenzband voll besetzt während im Leitungsband keine Ladungsträger sind. Durch Anlegen einer Spannung oder Absorption von Photonen können Elektronen jedoch in das Leiterband gelangen. 
+
+\gra{Bandlucke}{Bändermodell des Halbleiters \label{Bandlucke}}
 Die charakteristische Größe der Bandlückenenergie definiert ob ein Stoff ein Isolator, Halbleiter oder Leiter ist. Isolatoren haben eine besonders große Bandlüclenenergie, die mehrere $eV$ beträgt. Halbleiter haben typischerweise eine Bandlücke von weniger als einem $eV$, sie isolieren nur bei sehr niedrigen Temperaturen. Bereits thermische Anregungen reichen bei höheren Temperaturen für die Elektronen aus, um ins Leitungsband gehoben zu werden, Zurück bleibt bei diesem Vorgang ein positiv geladenes Loch, man spricht von einem Elektron-Loch-Paar. Bei Leitern überlappen sich beide Energiebänder, sodass stets genug Ladungsträger im Leitungsband sind, um einen Stromfluss zu gewährleisten.
 
 \subsection{Bewegung von Ladungsträgern im Halbleiter}
@@ -136,6 +138,8 @@ Die charakteristische Größe der Bandlückenenergie definiert ob ein Stoff ein 
 \subsection{Direkte und indirekte Halbleiter}
 
 Untersucht man die Energien der Bänder in Abhängikeit des Impulses ergeben sich komplizierte Verläufe, aus denen sich eine natürliche Unterscheidung von Halbleitern ableiten lässt: Liegt das Maximum des Valenzbandes beim gleichen Impuls wie das Minimum des Leitungsbandes spricht man von direkten Halbleitern, liegen Maximum und Minimum bei verschiedenen Impulsen, spricht man von indirekten Halbleitern.
+
+\gra{(in)direkte_Halbleiter}{Direkte und indirekte Halbleiter}
 Bei direkten Halbleitern können Elektronen einfach durch die Aufnahme der Bandlückenenergie (Übertrag durch ein Photon von ausreichender Energie $E_{Photon}=\hbar\omega\geq E_g$) ins Leitungsband gehoben werden während bei indirekten Halbleitern durch die Verschiebung der Extrema um $\Delta p$ ein Elektron zusätzlich zur Energieaufnahme auch noch seinen Impuls ändern muss. Dies geschieht durch Erzeugung bzw. Vernichtung von Phononen, d.h. Gitterschwingungen.
 
 \subsection{Extrinsische Halbleiter und Dotierung}
@@ -146,11 +150,13 @@ Oft wird diese Verunreinigung absichtlich vorgenommen (typischerweise ca. 1 Frem
 \subsection{Halbleiter-Diode}
 
 Bringt man eine Schicht n-Typ-Halbleiter und eine Schicht p-Typ-Halbleiter zusammen, spricht man von einer Diode. Die quasie-freien Ladungsträger der n-Typ-Schicht, d.h. die Elektronen, diffundieren in die freien Löcher der p-Typ-Schicht. Im Übergangsbereich löschen sich die freien Ladungsträger also durch diesen Vorgang aus. 
-Nach diesem Diffusionsprozess bleiben in der n-Typ-Schicht positiv geladene Ionen und in der p-Typ-Schicht negativ geladene Ionen zurück (Verarmungszone), die sich nicht frei bewegen können, da sie in die Gitterstruktur des Kristalls fest eingebunden sind. Es ensteht so ein elektrisches Feld (Kontakt-Potential mit Spannung $U_{bi}$). 
+Nach diesem Diffusionsprozess bleiben in der n-Typ-Schicht positiv geladene Ionen und in der p-Typ-Schicht negativ geladene Ionen zurück (Verarmungszone), die sich nicht frei bewegen können, da sie in die Gitterstruktur des Kristalls fest eingebunden sind. Es ensteht so ein elektrisches Feld (Kontakt-Potential mit Spannung $U_{bi}$), wie in Abbildung 3 zu sehen ist. 
 
-Durch Anlegen einer äußeren Spannung bei der der positive Pol an die n-Schicht angeschlossen wird, und der negative Pol an die p-Schicht vergrößert sich die Verarmungszone und die Ladungsträger müssen ein größeres Spannungsgefälle überwinden: die Diode ist in Sperrrichtung gepolt. Bei Anlegung einer äußeren Spannung mit umgekehrter Polung können die überschüssigen Elektronen in der p-Schicht problemlos zum positiven Pol wandern, die Diode ist dann in Durchlassrichtung gepolt.
+\gra{n-p-Diode}{Halbleiter-Diode}
+
+Durch Anlegen einer äußeren Spannung bei der der positive Pol an die n-Schicht angeschlossen wird, und der negative Pol an die p-Schicht vergrößert sich die Verarmungszone und die Ladungsträger müssen ein größeres Spannungsgefälle überwinden: die Diode ist in Sperrrichtung gepolt. Bei Anlegung einer äußeren Spannung mit umgekehrter Polung können die überschüssigen Elektronen in der p-Schicht problemlos zum positiven Pol wandern, die Diode ist in Durchlassrichtung gepolt.
 Dies bildet die Grundlage für Halbleiterdetektoren. Die Grundidee von Halbleiterdetektoren ist gerade eine Halbleiterdiode in einen Stromkreis einzubinden.
-\subsection{Wechselwirkung von Strahlung mit Materie}
+\subsection{Wechselwirkung von Strahlung mit Materie \cite{anleitungkhwz}}
 
 Die Wechselwirkung von Strahlung mit Materie wird im Wesentlichen durch drei verschiedene Effekte beschrieben: \textbf{Photoeffekt}, \textbf{Comptoneffekt} und \textbf{Paarbildung}.
 Der Effekt der Paarbildung tritt für Energien über $1,022$ MeV auf, die in diesen Versuchen nicht erreicht werden, sodass wir diesen Effekt hier nicht weier erläutern.
@@ -195,6 +201,8 @@ mit:
 	\item $\sigma(t)=\sqrt{2 D_n t}$
 \end{itemize}
 
+\subsection{Geräte}
+
  
 \newpage
 \section[Versuchsaufbau- und Durchführung]{Versuchsaufbau- und Durchführung} 
@@ -202,10 +210,10 @@ mit:
 
 \subsection{Teil I}
 
-\subsubsection{Aufbau}
-\gra{TeilI_Aufbau}{Versuchsaufbau Teil I: Messen der Bandlückenenergie}
+\subsubsection{Aufbau} \label{4.1}
+\gra{TeilI_Aufbau}{Versuchsaufbau Teil I: Messen der Bandlückenenergie}\label{Aufbau1}
 
-Abbildung [] zeigt den schematischen Versuchsaufbau des Versuchs. Der Versuchsaufbau besteht aus einer optischen Bank, die in einem 15 Grad Winkel zueinander stehen. Am Beginn des Strahlengangs steht eine Lichtquelle, die ein kontinuierliches Lichtspektrum (weißes Licht) emittiert, es handelt sich dabei um eine Lampe. Mittels einer Linse die im Abstand ihrer Brennweite zur Lampe steht, wird dieses Licht parallelisiert und trifft auf ein optisches Gitter, das am Ende des ersten Armes montiert ist. Das optische Gitter ist auf einer Halterung drehbar montiert, sodass der Einstellwinkel varriert werden kann. Je nach Einstellwinkel fällt als Folge von Interferenz Licht einer anderen Wellenlänge auf die Probe, das optische Gitter fungiert als Spektrometer. Es steht für jede Probe je ein geeignetes Gitter zur Verfügung. Auf dem zweiten Arm der Bank trifft das Licht zunächst auf eine maximal $2$ cm geöffnete Blende. Mit einem optischen Filter soll UV-Strahlung zweiter Beugungsordnung oder höher heraus gefiltert werden. Auch hier steht für jede Probe ein Filter zur Verfügung. Nach dem optischen Filter folgt die Halbleiterprobe im Strahlengang, an welche eine Spannung angelegt werden kann und somit der Stromfluss durch die Probe gemessen werden kann. Übersteigt die Photonennergie die Bandlückenenergie wird auf Grund der möglichen ABsorption ein Anstieg im Stromfluss erwartet. Hinter der Probe befindet sich ein Pyrodetektor , der das transmittierte Licht misst. Teil des Versuchaufbaus ist außerdem ein Lock-In-Verstärker.
+Abbildung \ref{Aufbau1} zeigt den schematischen Versuchsaufbau des Versuchs. Der Versuchsaufbau besteht aus einer optischen Bank, die in einem 15 Grad Winkel zueinander stehen. Am Beginn des Strahlengangs steht eine Lichtquelle, die ein kontinuierliches Lichtspektrum (weißes Licht) emittiert, es handelt sich dabei um eine Lampe. Mittels einer Linse die im Abstand ihrer Brennweite zur Lampe steht, wird dieses Licht parallelisiert und trifft auf ein optisches Gitter, das am Ende des ersten Armes montiert ist. Das optische Gitter ist auf einer Halterung drehbar montiert, sodass der Einstellwinkel varriert werden kann. Je nach Einstellwinkel fällt als Folge von Interferenz Licht einer anderen Wellenlänge auf die Probe, das optische Gitter fungiert als Spektrometer. Es steht für jede Probe je ein geeignetes Gitter zur Verfügung. Auf dem zweiten Arm der Bank trifft das Licht zunächst auf eine maximal $2$ cm geöffnete Blende. Mit einem optischen Filter soll UV-Strahlung zweiter Beugungsordnung oder höher heraus gefiltert werden. Auch hier steht für jede Probe ein Filter zur Verfügung. Nach dem optischen Filter folgt die Halbleiterprobe im Strahlengang, an welche eine Spannung angelegt werden kann und somit der Stromfluss durch die Probe gemessen werden kann. Übersteigt die Photonennergie die Bandlückenenergie wird auf Grund der möglichen ABsorption ein Anstieg im Stromfluss erwartet. Hinter der Probe befindet sich ein Pyrodetektor , der das transmittierte Licht misst. Teil des Versuchaufbaus ist außerdem ein Lock-In-Verstärker.
 
 \subsubsection{Durchführung}
 
@@ -214,9 +222,9 @@ Zunächst wird der Strahlengang überprüft und alle Geräte so justiert, dass d
 
 \subsubsection{Versuchsaufbau}
 
-\gra{TeilII_Aufbau}{Versuchsaufbau Teil II: Bewegung der Ladungsträgerwolke}
+\gra{TeilII_Aufbau}{Versuchsaufbau Teil II: Bewegung der Ladungsträgerwolke}\label{Aufbau2}
 
-In Abbildung [] ist der Versuchsaufbau zum Haynes-Shockley-Versuch zu sehen. Licht eines gepulstes Lasers wird hier durch ein Glasfaserkabel auf eine Germaniumprobe ($40\times 40\times 300\mathrm{mm}^3$, p-dotiert) geleitet.  Hierdurch ensteht eine Ladungsträgerwolke, welche durch die angelegte Spannung $U$ durch den Halbleiter wandert. Wir beobachten diese Wolke mit Hilfe eines Oszilloskops und einer Sonde.
+In Abbildung \ref{Aufbau2} ist der Versuchsaufbau zum Haynes-Shockley-Versuch zu sehen. Licht eines gepulstes Lasers wird hier durch ein Glasfaserkabel auf eine Germaniumprobe ($40\times 40\times 300\mathrm{mm}^3$, p-dotiert) geleitet.  Hierdurch ensteht eine Ladungsträgerwolke, welche durch die angelegte Spannung $U$ durch den Halbleiter wandert. Wir beobachten diese Wolke mit Hilfe eines Oszilloskops und einer Sonde.
 Um ordentlich messen zu können, ist es erforderlich, dass die Frequenz des gepulsten Lasers und die des Oszilloskops synchronisiert sind, was über die Verbindung des Trigger-Eingangs des Oszilloskops mit dem Laser bezweckt wird.
 
 Da die Probe wieder abkühlen muss, ist die Spannung $U$ nicht konstant. Viel mehr werden $98\%$ der Zeit einer Periode für das Abkühlen der Probe verwendet während der eigentliche Prozess in den restlichen $2\%$ der Zeit stattfindet.
@@ -283,6 +291,157 @@ Die von uns berechnete Bandlückenenergie von Silizium beträgt: $E_{\text{Si}}=
 \graTwo[0.49]{bandluecke_ge_negativ}{bandluecke_ge_positiv}{Nahaufnahmen des Germanium-Spektrums im a) negativen und b) positiven Bereich\label{speknahge}}
 \graTwo[0.49]{bandluecke_si_negativ}{bandluecke_si_positiv}{Nahaufnahmen des Silizium-Spektrums im a) negativen und b) positiven Bereich\label{speknahsi}}
 
+\subsection{Teil III: Halbleiterdetektor}
+
+\subsubsection{Energiekalibrierung}
+
+Anhand der aufgenommenen Spektren werden zunächst Energiekalibrierungen vorgenommen. Dafür werden in den aufgenommenen Spektren die Peaks der Zerfälle mit bekannten Energien ($59.5$ keV für $^{241}$Am und $122$ keV bzw. $136.5$ keV für $^{57}$Co) zunächst Gauß-gefittet (siehe ). Dies geschieht für den CdTe-Detektor und den Si-Detektor sowie die jeweiligen Proben getrennt. 
+Beim Identifizieren der Peaks ist zu berücksichtigen, dass es durch verschiedene Effekte, die z.B. mit dem Compton-Effekt und dem Photoeffekt zu tun haben, besonders im Anfangsbereich zu einem starken Untergrund kommt. So führen Wechselwirkungen über den Compton-Effekt beispielsweise dazu, dass die gestreuten Photonen Einträge in einem weiten Bereich des Spektrums verursachen können und zwar bis zur sogenannten Compton-Kante, die der maximalen Energie eines gestreuten Photons entspricht (d.h. Streuwinkel von 180°). 
+
+\gra{Am_CdTE_Teil3}{CdTe-Detektor: $59.5$ keV Peak von $^{241}$Am  }
+\gra{Co_CdTe_Teil3}{CdTe-Detektor: $122$ keV bzw. $136.5$ keV von $^{57}$Co}
+\gra{Am_Si_Teil3}{Si-Detektor: $59.5$ keV Peak von $^{241}$Am }
+\gra{Co_Si_Teil3}{Si-Detektor: $122$ keV bzw. $136.5$ keV von $^{57}$Co}
+
+\newpage
+
+Wir erhalten für die verschiedenen Peaks mit ihren Gaußfits folgende Werte:
+
+
+
+\begin{table}[h!]
+
+\centering
+\begin{tabular}{l|c|c}
+&CdTe&Si\\\hline
+Peak 1&
+
+ $\mu    = 313.7\pm0.3$&$\mu    = 52.0\pm0.3$\\
+&$ \sigma = 11.1\pm0.4$&$\sigma = 2.0\pm0.3$\\
+&$ C = 46132\pm2381$&$C = 6244\pm1282$\\\hline
+
+Peak 2&
+
+ $\mu    = 647.5\pm0.3$&$\mu    = 620.9\pm0.3$\\
+ &$\sigma = 10.6\pm0.4$&$\sigma = 11.6\pm0.6$\\
+&$ C = 7252\pm373$&$C = 16283\pm9718$\\\hline
+
+Peak 3&
+
+ $\mu    = 723.8\pm1.0$&$\mu    = 695.4\pm1.5$\\
+ &$\sigma = 9.4\pm1.3$&$\sigma = 13\pm2$\\
+ &$C = 666\pm115$&$C = 13042\pm2798$\\\hline
+\end{tabular}
+\caption{Peaks der Zerfallspektren}
+\end{table}
+
+wobei wir Gaußfunktionen folgender Form verwendet haben:
+
+\[c(x)=C\frac{1}{\sigma}exp\left[ -\frac{1}{2}\left(\frac{x-x_c}{\sigma}\right)^2\right] \]
+
+Auf den Faktor $\frac{1}{\sqrt{2\pi}}$ haben wir hier verzichtet, da er für die Auswertung nicht relevant ist.
+
+Anhand dieser führen wir nun die Energiekalibrierung durch, indem wir einen linearen Fit für die Energie-Channel-Paare tätigen.
+
+\gra{CdTe_Kali_Teil3}{CdTe: Energiekalibrierung} \label{Linfit}
+\gra{Si_Kali_Teil3}{Si: Energiekalibrierung} 
+
+Aus den linearen Fits (siehe Abbildung \ref{Linfit}) ergeben sich für unsere Energiekalibrierung folgende Werte:
+
+\begin{table}[h!] 
+\centering
+\begin{tabular}{l|c|c}
+
+&CdTe&Si\\\hline
+Energiekalibrierung&
+ $b_{CdTe} = 5.330\pm0.010 channel/keV $& $b_{Si}    = 8.7\pm0.4 channel/keV $\\
+
+
+ \end{tabular}
+ \caption{Energiekalibrierung der Halbleiterdetektoren \label{b}}
+\end{table}
+
+\subsubsection{Absorptionsrate}
+
+Wir wollen in einem nächsten Schritt nun die Absorptionsrate der Detektoren berechnen, die sich aus dem Verhätnis der Vorfaktoren $C$ des Gaußfits berechnet, wobei die Absorptionsflächen der Detektoren $a_{Si}=100mm^2$ $a_{CdTe}=23mm^2$ zu berücksichtigen sind:
+
+\begin{align*}
+r&=\frac{C_{Si}a_{CdTe}}{C_{CdTe}a{Si}}\\
+\end{align*}
+
+wobei sich der Fehler mit Gauß'scher Fehlerfortpfalnzung berechnet:
+
+\begin{align*}
+s_r&=r \sqrt{\left(\frac{s_{C_{Si}}}{C_{Si}}\right)^2+\left(\frac{s_{C_{CdTe}}}{C_{CdTe}}\right)^2}
+\end{align*}
+
+Wir erhalten für die verschiedenen Peaks folgende Ergebnisse:
+\begin{table}[h!]
+
+{\centering{}
+\begin{tabular}{c||c|c}
+					& Absorptionsrate r & Fehler	\\ \hline\hline
+$59.5 eV$ Peak		& 0.031			    & 0.007		\\ \hline
+$122.06 eV$ Peak	& 0.5 			    & 0.3	\\ \hline
+$136.47 eV$ Peak	& 4.5 		     	& 1.2
+\end{tabular}\\}
+ \caption{Absorptionsrate
+  der Halbleiterdetektoren}
+\end{table}
+\subsubsection{Energieauflösung}
+In diesem Abschnitt soll nun noch die relative Energieauflösung berechnet werden, die sich aus dem Verhältnis der Halbwertsbreite eines Peaks zu dessen Lage berechnet. Für eine Gaußkurve berechnet sich die Halbwertszeit wie folgt:
+
+\begin{align*}
+FWHM = 2\sqrt{2\ln2}\sigma = 2.35 \sigma
+\end{align*}
+
+Damit gilt für die relative Energieauflösung:
+
+\begin{align*}
+RER(E) = \frac{FWHM_E}{E}=2.35\frac{\sigma_E}{E} = 2.35\frac{\sigma}{b \cdot E}
+\end{align*}
+
+wobei 
+\begin{itemize}
+\item $E =$ Energie der Photonen
+\item $b =$ Energiekalibrierungsfaktor (siehe Tabelle \ref{b})
+\item $\sigma_E =$ Standardabweichung in keV
+\item $\sigma =$  Standardabweichung in Channel 
+\end{itemize}
+
+Der Fehler berechnet sich wie folgt:
+
+\begin{align*}
+s_{RER} = \sqrt{\left(\frac{s_b}{b}\right)^2+\left(\frac{s_\sigma}{\sigma}\right)^2}\cdot RER
+\end{align*}
+
+Als Ergebnis erhalten wir so für CdTe:
+
+\begin{table}[h!]
+
+{\centering{}
+\begin{tabular}{c||c|c}
+					& Energieauflösung & Fehler	\\ \hline\hline
+$59.5 eV$ Peak		& 0.083		        & 0.003		\\ \hline
+$122.06 eV$ Peak	& 0.0383		    & 0.0014	\\ \hline
+$136.47 eV$ Peak	& 0.030	         	& 0.004
+\end{tabular}\\}
+ \caption{Energieauflösung CdTe}
+\end{table}
+
+und für Si:
+
+\begin{table}[h!]
+
+{\centering{}
+\begin{tabular}{c||c|c}
+					& Energieauflösung & Fehler	\\ \hline\hline
+$59.5 eV$ Peak		& 0.0091		    & 0.0014 	\\ \hline
+$122.06 eV$ Peak	& 0.0257			& 0.0017	\\ \hline
+$136.47 eV$ Peak	& 0.026		     	& 0.004
+\end{tabular}\\}
+ \caption{Energieauflösung Si}
+\end{table}
 
 \newpage
 \section{Zusammenfassung/Diskussion}
@@ -335,20 +494,29 @@ Die von uns berechnete Bandlückenenergie von Silizium beträgt: $E_{\text{Si}}=
 \thispagestyle{empty}
 \begin{thebibliography}{9}
 
-\bibitem{anleitung}
+\bibitem{anleitungkhwz}
  (Zerfall von $^{57}$Co): http://hacol13.physik.uni-freiburg.de/fp/Versuche/FP1/FP1-6-KurzeHalbwertzeiten/Anleitung.pdf
   
-\bibitem{physchem}
-	Gerd Weldler, Hans-Joachim Freund,
-	\emph{Lehrbuch der Physkalischen Chemie, Band 1},
-	6th edition,
-	John Wiley \& Sons,
-	2012
+\bibitem{staat}
+  	Simon Amrein,
+  	\emph{Staatsexamensarbeit: Halbleiter und Halbleiterdetektoren},\\
+  	Albert-Ludwigs-Universität Freiburg,
+  	Physikalisches Institut,
+  	2008
 
-\bibitem{nuclear}
-Bernard L. Cohen,
-\emph{Concepts of Nuclear Physics},
- New York usw.: McGraw-Hill 1971
+\bibitem{chem}
+	Caroline Röhr
+	\emph{Skript zur Vorlesung: Methoden der anorganischen Chemie},\\
+	Albert-Ludwigs-Universität Freiburg,
+	Institut für anorganische und analytische Chemie,\\
+	\emph{kein Herausgabedatum, da es sich um eine Website handelt (Stand: 22.08.15 17:16)},\\
+	http://ruby.chemie.uni-freiburg.de/
+
+\bibitem{anleitung}
+  	S. Amrein (2008), K. Lohwasser und M. Köhli (2011), S. Kühn (2013)
+  	\emph{Versuchsanleitung Fortgeschrittenen Praktikum I: Halbleiter},
+  	Albert-Ludwigs-Universität Freiburg,
+  	Physikalisches Institut
   
 %\bibitem{molmasse}
 %  \emph{http://www.convertunits.com/molarmass/<ELEMENTNAME AUF ENGLISCH>}, Stand 28.09.2015
