@@ -15,8 +15,9 @@ gausfit <- function(input,bereich,weighted=FALSE,sig0=0,N0=0){ #--- Fitten der E
     #sig0=(daten$x[bereich[2]]-daten$x[bereich[1]])/3
     sig0=(bereich[2]-bereich[1])/6
   }
+  print(ymax-ymin)
   N0=(sqrt(2*pi)*sig0)*(ymax-ymin)
-  cat(paste("\nC=",ymin,"\nN=",N0,"\nmu=",mu0,"\nsigma=",sig0,sep=""))
+  #cat(paste("\nC=",ymin,"\nN=",N0,"\nmu=",mu0,"\nsigma=",sig0,sep=""))
   #plot (function(x){ymin + N0/(sqrt(2*pi)*sig0)*exp(-(x-mu0)^2/(2*sig0^2))},bereich[1],bereich[2],add=TRUE,col="red")
   if(weighted)
   {
@@ -37,7 +38,7 @@ plotgaus <- function(fitdata,bereich){ #--- Plotten der gefitteten Gaußfunktion
   mu<-fitdata["mu","Estimate"]
   sig<-fitdata["sig","Estimate"]
   
-  plot (function(x){C + N/(sqrt(2*pi)*sig)*exp(-(x-mu)^2/(2*sig^2))},bereich[1],bereich[2],add=TRUE,col="red")
+  plot (function(x){C + N/(sqrt(2*pi)*sig)*exp(-(x-mu)^2/(2*sig^2))},bereich[1],bereich[2],add=TRUE,col="black")
   
 }
 
