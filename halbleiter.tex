@@ -138,6 +138,8 @@ Die charakteristische Größe der Bandlückenenergie definiert ob ein Stoff ein 
 
 \subsection{Bewegung von Ladungsträgern im Halbleiter}
 
+
+
 \subsection{Direkte und indirekte Halbleiter}
 
 Untersucht man die Energien der Bänder in Abhängikeit des Impulses ergeben sich komplizierte Verläufe, aus denen sich eine natürliche Unterscheidung von Halbleitern ableiten lässt: Liegt das Maximum des Valenzbandes beim gleichen Impuls wie das Minimum des Leitungsbandes spricht man von direkten Halbleitern, liegen Maximum und Minimum bei verschiedenen Impulsen, spricht man von indirekten Halbleitern.
@@ -302,22 +304,34 @@ Wir haben für unterschiedliche Entfernungen die Ladungsträgerwolken mit dem Os
 	&=A(t)\cdot\frac1{\sqrt{2\pi\sigma^2(t)}}\cdot\exp\left(-\frac{(x-x_c(t))^2}{2\sigma^2(t)}\right)
 \end{align*}
 Dabei ist $x_c$ die Entfernung zwischen Laserstrahl und Messspitze, $A(t)=C\cdot\exp\left(-\frac t{\tau_e}\right)$ ein Fitparameter und $\sigma(t)$ die Breite der gefitteten Gaußfunktion.\\
+\subsubsection{Messungen bei fester Spannung}
+
 \gra{teil3x_t}{Die Entfernung zwischen Laserstrahl und Messspitze über der Zeit\label{xuebert}}
+
 \paragraph{Beweglichkeit der freien Elektronen} Die Beweglichkeit $\mu_e$ der freien Elektronen ergibt sich aus der Geschwindigkeit der Elektronen. Diese ergibt sich aus einem linearen Fit der Entfernung über der Zeit (siehe Abbildung \ref{xuebert}). Aus diesem Fit erhalten wir den Wert $v_e=\mu_eE=\mu_e\frac{U}{l}=(473\pm8)\,\frac{\text{m}}{\text{s}}$. Aus diesem ergibt sich mit der Spannung $U=(50\pm0.2)$ V und der Länge des Germaniumblocks $l=(29.99\pm0.01)$ mm für die Beweglichkeit der Elektronen der Wert $\mu_e=(2840\pm170)\,\frac{\text{cm}^2}{\text{Vs}}$.
 
 \gra{teil3sigma_t}{Zeitliche Entwicklung der Breite $\sigma$\label{sigmat}}
-\paragraph{Diffusionskonstante der freien Elektronen} Aus der zeitlichen Entwicklung des Fitparameters $\sigma$, der Breite der Gaußfunktion lässt sich die Diffusionskonstante $D_e$ bestimmen. Es gilt: $\sigma(t)=\sqrt{2D_et}$. Durch einen Fit dieser Funktion an die Daten (siehe Abbildung\ref{sigmat}) ergibt sich für die Diffusionskonstante nun der Wert $D_e=(101\pm3)\,\frac{\text{cm}^2}{\text{s}}$. 
+\paragraph{Diffusionskonstante der freien Elektronen} Aus der zeitlichen Entwicklung des Fitparameters $\sigma$, der Breite der Gaußfunktion lässt sich die Diffusionskonstante $D_e$ bestimmen. Es gilt: $\sigma(t)=\sqrt{2D_et}$. Durch einen Fit dieser Funktion an die Daten (siehe Abbildung\ref{sigmat}) ergibt sich für die Diffusionskonstante nun der Wert $D_e=(110\pm3)\,\frac{\text{cm}^2}{\text{s}}$. 
 
 \gra{teil3A_t}{Zeitliche Entwicklung des Fitparameters $A$\label{At}}
 \paragraph{Lebenszeit der freien Elektronen} Aus der zeitlichen Entwicklung des Fitparameters $A$ (siehe Abbildung \ref{At}) bestimmen wir die Lebenszeit $\tau_e$ der freien Elektronen. Der Parameter verhält sich folgendermaßen: $A(t)=C\cdot\exp\left(-\frac t{\tau_e}\right)$. Aus dem Exponentialfit erhalten wir nun für die Lebenszeit den Wert $\tau_e=(5.41\pm0.03)\cdot10^{-6}s$.
 
+\subsubsection{Messungen bei fester Spannung}
+
 \gra{teil3messreihe2}{Ladungsträgerwolken bei gleicher Entfernung und unterschiedlichen Spannungen\label{wolken2}}
 Eine weitere Möglichkeit, die Beweglichkeit der Elektronen zu bestimmen, ist die Aufnahme von Ladungsträgerwolken bei fester Entfernung und verschiedenen Spannungswerten. 
 
+
+
 \gra{teil3U_t}{Kehrwert der Spannung über die Zeit\label{Ut}}
-\paragraph{Beweglichkeit der freien Elektronen (Variante 2)} 
+\paragraph{Beweglichkeit der freien Elektronen} 
 Aus $v_e=\mu_eE=\mu_e\frac{U}{l}$ folgt $\frac1U=\frac{\mu_e}{xl}t$. Über den linearen Fit in Abbildung \ref{Ut} erhält man nun $\frac{\mu_e}{xl}=(4760\pm70)\,\frac1{\text{VS}}$ und daraus für die Beweglichkeit der Elektronen $\mu_e=(4200\pm300)\,\frac{\text{cm}^2}{\text{Vs}}$
 
+\gra{teil3sigma_t2}{Zeitliche Entwicklung der Breite $\sigma$\label{sigmat2}}
+\paragraph{Diffusionskonstante der freien Elektronen} Aus der zeitlichen Entwicklung des Fitparameters $\sigma$, der Breite der Gaußfunktion lässt sich wieder die Diffusionskonstante $D_e$ bestimmen. Es gilt: $\sigma(t)=\sqrt{2D_et}$. Durch einen Fit dieser Funktion an die Daten (siehe Abbildung\ref{sigmat2}) ergibt sich nun für die Diffusionskonstante nun der Wert $D_e=(19.2\pm1.8)\,\frac{\text{cm}^2}{\text{s}}$. 
+
+\gra{teil3A_t2}{Zeitliche Entwicklung des Fitparameters $A$\label{At2}}
+\paragraph{Lebenszeit der freien Elektronen} Wieder bestimmen wir aus der zeitlichen Entwicklung des Fitparameters $A$ (siehe Abbildung \ref{At2}) die Lebenszeit $\tau_e$ der freien Elektronen. Aus dem Exponentialfit an $A(t)=C\cdot\exp\left(-\frac t{\tau_e}\right)$ erhalten wir diesmal für die Lebenszeit den Wert $\tau_e=(2.8\pm0.5)\cdot10^{-6}s$.
 \subsection{Teil III: Halbleiterdetektor}
 
 \subsubsection{Energiekalibrierung}
@@ -396,7 +410,7 @@ Wir wollen in einem nächsten Schritt nun die Absorptionsrate der Detektoren ber
 r&=\frac{C_{Si}a_{CdTe}}{C_{CdTe}a{Si}}\\
 \end{align*}
 
-wobei sich der Fehler mit Gauß'scher Fehlerfortpfalnzung berechnet:
+wobei sich der Fehler mit Gauß'scher Fehlerfortpflanzung berechnet:
 
 \begin{align*}
 s_r&=r \sqrt{\left(\frac{s_{C_{Si}}}{C_{Si}}\right)^2+\left(\frac{s_{C_{CdTe}}}{C_{CdTe}}\right)^2}
@@ -473,8 +487,8 @@ $136.47 eV$ Peak	& 0.026		     	& 0.004
 \newpage
 \section{Zusammenfassung/Diskussion}
 
-
-
+\subsection{Zusammenfassung der Ergebnisse}
+Die Bandlückenenergie beträgt von Germanium $E_{\text{Ge}}=(0.68\pm0.05)\text{ eV}$ und von Silizium $E_{\text{Si}}=(1.09\pm0.04)\text{ eV}$.
 
 \subsection{Diskussion}\label{Diskussion}
 
