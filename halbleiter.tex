@@ -98,9 +98,9 @@
 \section{Einleitung}
 
 In diesem Experiment soll in drei verschiedenen Versuchsteilen die Funktionsweise von Halbleitern und Halbleiterdetektoren untersucht werden. Silizium wird hier als Beispiel für einen reinen Halbleiter untersucht und Kadmiumtellurid als Beispiel für einen Verbindungshalbleiter.
-In \textbf{Teil I} des Versuchs wird die Bandlückenenergie von Silizium und Germanium, wichtiges Charakteristikum von Halbleitern, gemessen, die die Auflösung eines Halbleiterdetektors bestimmt.\\
-In \textbf{Teil II} des Versuchs geht es um die Beobachtung der Ausbreitung
-von Ladungsträgern im Halbleiter mit dem Haynes-Shockley-Experiment und in \textbf{Teil III} des Experiments werden mit Halbleiterdetektoren radioaktive Spektren aufgenommen und untersucht, wie gut sich Halbleiterdetektoren hierfür eignen.
+In \textbf{Teil I} des Versuchs wird die Bandlückenenergie von Silizium und Germanium, wichtiges Charakteristikum von Halbleitern, gemessen, die die Auflösung eines Halbleiterdetektors bestimmt. \\
+In \textbf{Teil II} des Versuchs,  dem Haynes-Shockley-Experiment, geht es um die Ausbreitung
+von einer durch einen gepulsten Laser erzeugten Ladungsträgerwolken im Halbleiter, die mit Hilfe eines Oszilloskops und einer Sonde beobachtet wird. An Hand zweier Messreihen werden die mittlere Lebensdauer $\tau_n$ die Diffusionskonstande $D_n$ und die Beweglichkeit $\mu_n$ bestimmt. In \textbf{Teil III} des Experiments werden mit Halbleiterdetektoren radioaktive Spektren aufgenommen und untersucht, wie gut sich Halbleiterdetektoren hierfür eignen. Hierzu wird die Absorptionsrate sowie die relative Energieauflösung eines CdTe- und eines Si-Halbleiterdetektors bestimmt.
 
 
 \newpage
@@ -126,11 +126,14 @@ In \ref{4.1} wird genauer erklärt wie sich ein optisches Gitter so als Spektrom
 
 \subsection{Halbleiter}
 
+Materialen lassen sich an Hand der Eigenschaft der spezifischen elektrischen Leitfähigkeit $\rho$ in Isolatoren ($\rho \geq 10^8\Omega cm$), Halbleiter ($10^8\Omega cm \geq \rho \geq 10^-3 \Omega cm $)und Leiter ($\rho \leq 10^-3 \Omega cm$) unterteilen. Die elektrische Leitfähigkeit eines Materials hängt von der Anzahl der freien Ladungsträger ab. Die Leitfähigkeit von Halbleitern ist stark temperaturabhängig, so erwartet man theoretisch bei $0$K keine freien Ladungsträger, mit steigender Temperatur nimmt die Leitfähigkeit von Halbleitern zu. 
+Des weitern unterscheidet man zwischen elementarem Halbleitern, die aus nur einem Element bestehen, bekannte Beispiele sind hier Silizium und Germanium, und Verbindungshalbleitern, die aus einer Verbindung von wenigstens  zwei Elementen bestehen. 
+
 \subsection{Das Bändermodell}
 
 Bei einem einzelnen Atome sind die Energieniveaus der Elektronen diskret. Nähert man nun zwei Atome so nah an, dass sich ihre Orbitale überlappen, müssen sich die Energieniveaus gemäß dem Pauliprinzip aufspalten. In einem Kristall wechseln nun der Art viele Atome miteinander, dass auf diese Art und Weise Energiebänder enstehen (s. Abbildung \ref{Bandlucke}). Das energetisch höchste Band, das im Grundzustand besetztist heißt Valenzband, das erste unbesetzte Band heißt Leitungsband. Der Energieabstand zwischen diesen beiden Bändern wird als Bandlücke bezeichnet. Bei $T = 0$K ist das Valenzband voll besetzt während im Leitungsband keine Ladungsträger sind. Durch Anlegen einer Spannung oder Absorption von Photonen können Elektronen jedoch in das Leiterband gelangen. 
 
-\gra{Bandlucke}{Bändermodell des Halbleiters \label{Bandlucke}}
+\gra{Bandlucke}{Bändermodell des Halbleiters \label{Bandlucke}} \cite{staat}
 Die charakteristische Größe der Bandlückenenergie definiert ob ein Stoff ein Isolator, Halbleiter oder Leiter ist. Isolatoren haben eine besonders große Bandlüclenenergie, die mehrere $eV$ beträgt. Halbleiter haben typischerweise eine Bandlücke von weniger als einem $eV$, sie isolieren nur bei sehr niedrigen Temperaturen. Bereits thermische Anregungen reichen bei höheren Temperaturen für die Elektronen aus, um ins Leitungsband gehoben zu werden, Zurück bleibt bei diesem Vorgang ein positiv geladenes Loch, man spricht von einem Elektron-Loch-Paar. Bei Leitern überlappen sich beide Energiebänder, sodass stets genug Ladungsträger im Leitungsband sind, um einen Stromfluss zu gewährleisten.
 
 \subsection{Bewegung von Ladungsträgern im Halbleiter}
@@ -139,7 +142,7 @@ Die charakteristische Größe der Bandlückenenergie definiert ob ein Stoff ein 
 
 Untersucht man die Energien der Bänder in Abhängikeit des Impulses ergeben sich komplizierte Verläufe, aus denen sich eine natürliche Unterscheidung von Halbleitern ableiten lässt: Liegt das Maximum des Valenzbandes beim gleichen Impuls wie das Minimum des Leitungsbandes spricht man von direkten Halbleitern, liegen Maximum und Minimum bei verschiedenen Impulsen, spricht man von indirekten Halbleitern.
 
-\gra{(in)direkte_Halbleiter}{Direkte und indirekte Halbleiter}
+\gra{(in)direkte_Halbleiter}{Direkte und indirekte Halbleiter}\cite{staat}
 Bei direkten Halbleitern können Elektronen einfach durch die Aufnahme der Bandlückenenergie (Übertrag durch ein Photon von ausreichender Energie $E_{Photon}=\hbar\omega\geq E_g$) ins Leitungsband gehoben werden während bei indirekten Halbleitern durch die Verschiebung der Extrema um $\Delta p$ ein Elektron zusätzlich zur Energieaufnahme auch noch seinen Impuls ändern muss. Dies geschieht durch Erzeugung bzw. Vernichtung von Phononen, d.h. Gitterschwingungen.
 
 \subsection{Extrinsische Halbleiter und Dotierung}
@@ -152,7 +155,7 @@ Oft wird diese Verunreinigung absichtlich vorgenommen (typischerweise ca. 1 Frem
 Bringt man eine Schicht n-Typ-Halbleiter und eine Schicht p-Typ-Halbleiter zusammen, spricht man von einer Diode. Die quasie-freien Ladungsträger der n-Typ-Schicht, d.h. die Elektronen, diffundieren in die freien Löcher der p-Typ-Schicht. Im Übergangsbereich löschen sich die freien Ladungsträger also durch diesen Vorgang aus. 
 Nach diesem Diffusionsprozess bleiben in der n-Typ-Schicht positiv geladene Ionen und in der p-Typ-Schicht negativ geladene Ionen zurück (Verarmungszone), die sich nicht frei bewegen können, da sie in die Gitterstruktur des Kristalls fest eingebunden sind. Es ensteht so ein elektrisches Feld (Kontakt-Potential mit Spannung $U_{bi}$), wie in Abbildung 3 zu sehen ist. 
 
-\gra{n-p-Diode}{Halbleiter-Diode}
+\gra{n-p-Diode}{Halbleiter-Diode} \cite{staat}
 
 Durch Anlegen einer äußeren Spannung bei der der positive Pol an die n-Schicht angeschlossen wird, und der negative Pol an die p-Schicht vergrößert sich die Verarmungszone und die Ladungsträger müssen ein größeres Spannungsgefälle überwinden: die Diode ist in Sperrrichtung gepolt. Bei Anlegung einer äußeren Spannung mit umgekehrter Polung können die überschüssigen Elektronen in der p-Schicht problemlos zum positiven Pol wandern, die Diode ist in Durchlassrichtung gepolt.
 Dies bildet die Grundlage für Halbleiterdetektoren. Die Grundidee von Halbleiterdetektoren ist gerade eine Halbleiterdiode in einen Stromkreis einzubinden.
@@ -421,7 +424,7 @@ Als Ergebnis erhalten wir so für CdTe:
 
 {\centering{}
 \begin{tabular}{c||c|c}
-					& Energieauflösung & Fehler	\\ \hline\hline
+	CdTe				& Energieauflösung & Fehler	\\ \hline\hline
 $59.5 eV$ Peak		& 0.083		        & 0.003		\\ \hline
 $122.06 eV$ Peak	& 0.0383		    & 0.0014	\\ \hline
 $136.47 eV$ Peak	& 0.030	         	& 0.004
@@ -435,7 +438,7 @@ und für Si:
 
 {\centering{}
 \begin{tabular}{c||c|c}
-					& Energieauflösung & Fehler	\\ \hline\hline
+	Si				& Energieauflösung & Fehler	\\ \hline\hline
 $59.5 eV$ Peak		& 0.0091		    & 0.0014 	\\ \hline
 $122.06 eV$ Peak	& 0.0257			& 0.0017	\\ \hline
 $136.47 eV$ Peak	& 0.026		     	& 0.004
