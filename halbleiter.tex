@@ -310,7 +310,7 @@ Zum Berechnen der Bandlückenenergien müssen wir zunächst den Untergrund von d
 	\text{Abs}_{\text{real}}&=\frac{\text{Abs}-\text{Untergrund}_{\text{Abs}}}{\text{Lampe}}
 \end{align*}
 \graTwo[0.49]{bandluecke_ge_fehler}{bandluecke_si_fehler}{Messung zur Berechnung der Fehler von a) Germanium und b+c) Silizium\label{fehler}}
-Als Untergrund verwenden wir den Mittelwert unserer gemessenen Untergrundwerte und den statistischen Fehler als Unsicherheit des Untergrundes (siehe Abbildung \ref{untergrund}). Aus unserer Fehlermessung (siehe Abbildung) erhalten wir die Unsicherheiten auf die gemessenen Spektren und auf das Lampenspektrum. Mit Gauß'scher Fehlerfortpflanzung erhalten wir nun die Fehler auf die realen Spektren (\ref{srcbandluecke}):
+Als Untergrund verwenden wir den Mittelwert unserer gemessenen Untergrundwerte und den statistischen Fehler als Unsicherheit des Untergrundes (siehe Abbildung \ref{untergrund}). Aus unserer Fehlermessung (siehe Abbildung \ref{fehler}) erhalten wir die Unsicherheiten auf die gemessenen Spektren und auf das Lampenspektrum. Mit Gauß'scher Fehlerfortpflanzung erhalten wir nun die Fehler auf die realen Spektren (\ref{srcbandluecke}):
 \begin{align*}
 	s_{T,r}&=\text{Trans}_{\text{real}}\cdot\sqrt{\frac{s_T^2+s_{U,T}^2}{(\text{Trans}-\text{Untergrund}_{\text{Trans}})^2}+\frac{s_T^2}{\text{Lampe}^2}}\\
 	s_{A,r}&=\text{Abs}_{\text{real}}\cdot\sqrt{\frac{s_A^2+s_{U,A}^2}{(\text{Abs}-\text{Untergrund}_{\text{Abs}})^2}+\frac{s_T^2}{\text{Lampe}^2}}
@@ -470,13 +470,14 @@ Wir erhalten für die verschiedenen Peaks folgende Ergebnisse:
 {\centering{}
 \begin{tabular}{c||c|c}
 					& Absorptionsrate r & Fehler	\\ \hline\hline
-$59.5 eV$ Peak		& 0.031			    & 0.007		\\ \hline
-$122.06 eV$ Peak	& 0.5 			    & 0.3	\\ \hline
-$136.47 eV$ Peak	& 4.5 		     	& 1.2
+$59.5 keV$ Peak		& 0.031			    & 0.007		\\ \hline
+$122.06 keV$ Peak	& 0.5 			    & 0.3	\\ \hline
+$136.47 keV$ Peak	& 4.5 		     	& 1.2
 \end{tabular}\\}
  \caption{Absorptionsrate
   der Halbleiterdetektoren}
 \end{table}
+\newpage
 \subsubsection{Energieauflösung}
 In diesem Abschnitt soll nun noch die relative Energieauflösung berechnet werden, die sich aus dem Verhältnis der Halbwertsbreite eines Peaks zu dessen Lage berechnet. Für eine Gaußkurve berechnet sich die Halbwertszeit wie folgt:
 
@@ -511,9 +512,9 @@ Als Ergebnis erhalten wir so für CdTe:
 {\centering{}
 \begin{tabular}{c||c|c}
 	CdTe				& Energieauflösung & Fehler	\\ \hline\hline
-$59.5 eV$ Peak		& 0.083		        & 0.003		\\ \hline
-$122.06 eV$ Peak	& 0.0383		    & 0.0014	\\ \hline
-$136.47 eV$ Peak	& 0.030	         	& 0.004
+$59.5 keV$ Peak		& 0.083		        & 0.003		\\ \hline
+$122.06 keV$ Peak	& 0.0383		    & 0.0014	\\ \hline
+$136.47 keV$ Peak	& 0.030	         	& 0.004
 \end{tabular}\\}
  \caption{Energieauflösung CdTe}
 \end{table}
@@ -525,10 +526,11 @@ und für Si:
 {\centering{}
 \begin{tabular}{c||c|c}
 	Si				& Energieauflösung & Fehler	\\ \hline\hline
-$59.5 eV$ Peak		& 0.0091		    & 0.0014 	\\ \hline
-$122.06 eV$ Peak	& 0.0257			& 0.0017	\\ \hline
-$136.47 eV$ Peak	& 0.026		     	& 0.004
+$59.5 keV$ Peak		& 0.0091		    & 0.0014 	\\ \hline
+$122.06 keV$ Peak	& 0.0257			& 0.0017	\\ \hline
+$136.47 keV$ Peak	& 0.026		     	& 0.004
 \end{tabular}\\}
+
  \caption{Energieauflösung Si}
 \end{table}
 
@@ -551,15 +553,17 @@ Bei der Bestimmung der Bandlückenenergie im ersten Teil des Versuchs erhielten 
  Im zweiten Teil des Versuches erhielten wir als Ergebnisse für die Beweglichkeit, Diffusionskonstante und mittlere Lebensdauer folgende Werte:
  
  \vskip 10 pt
+ \begin{table}[h!]
  {\centering{}
- \begin{tabular}{c||c|c|c}
+ \resizebox{\textwidth}{!}{\begin{tabular}{c||c|c|c}
  					& Messreihe 1: konstante Spannung 	& Messreihe 2: konstanter Abstand & Literaturwert	\\ \hline\hline
 Beweglichkeit		& $\mu_e=(2840\pm170)\,\frac{\text{cm}^2}{\text{Vs}}$	&    $\mu_e=(4200\pm300)\,\frac{\text{cm}^2}{\text{Vs}}$		& $\mu_e=3900 \frac{\text{cm}^2}{\text{Vs}}$\\ \hline 
 Diffusionskonstante	& $D_e=(110\pm3)\,\frac{\text{cm}^2}{\text{s}}$		                	&  $D_e=(19.2\pm1.8)\,\frac{\text{cm}^2}{\text{s}}$	& $D_e=101 \frac{\text{cm}^2}{\text{s}}$ \\ \hline
 Lebenszeit      	& $\tau_e=(5.41\pm0.03)\cdot10^{-6}s$			                 	& $\tau_e=(2.8\pm0.5)\cdot10^{-6}s$
 & $\tau_e=(45\pm2)\cdot10^{-6}s$
- \end{tabular}\\}
-
+ \end{tabular}}}
+ \caption{Ergebnisse von Versuchsteil II}
+\end{table}
 \vskip 10 pt
 Im dritten Teil haben wir die Absorptionsrate und die relative Energieauflösung der Halbleiterdetektoren berechnet:
 
@@ -568,9 +572,9 @@ Im dritten Teil haben wir die Absorptionsrate und die relative Energieauflösung
 {\centering{}
 \begin{tabular}{c||c|c|c}
 					& Absorptionsrate r & Fehler & Literaturwerte 	\\ \hline\hline
-$59.5 eV$ Peak		& 0.031			    & 0.007	 &	0.014\\ \hline
-$122.06 eV$ Peak	& 0.5 			    & 0.3    & 0.0183	\\ \hline
-$136.47 eV$ Peak	& 4.5 		     	& 1.2    & 0.02
+$59.5 keV$ Peak		& 0.031			    & 0.007	 &	0.014\\ \hline
+$122.06 keV$ Peak	& 0.5 			    & 0.3    & 0.0183	\\ \hline
+$136.47 keV$ Peak	& 4.5 		     	& 1.2    & 0.02
 \end{tabular}\\ }
  \caption{Absorptionsrate
   der Halbleiterdetektoren}
@@ -580,9 +584,9 @@ $136.47 eV$ Peak	& 4.5 		     	& 1.2    & 0.02
 {\centering{}
 \begin{tabular}{c||c|c}
 	CdTe				& Energieauflösung & Fehler	\\ \hline\hline
-$59.5 eV$ Peak		& 0.083		        & 0.003		\\ \hline
-$122.06 eV$ Peak	& 0.0383		    & 0.0014	\\ \hline
-$136.47 eV$ Peak	& 0.030	         	& 0.004
+$59.5 keV$ Peak		& 0.083		        & 0.003		\\ \hline
+$122.06 keV$ Peak	& 0.0383		    & 0.0014	\\ \hline
+$136.47 keV$ Peak	& 0.030	         	& 0.004
 \end{tabular}\\ }
  \caption{Energieauflösung CdTe}
 \end{table}
@@ -590,21 +594,34 @@ $136.47 eV$ Peak	& 0.030	         	& 0.004
 \begin{table}[h!]
 
 {\centering{}
-\begin{tabular}{c||c|c}
+\begin{tabular}[h!]{c||c|c}
 	Si				& Energieauflösung & Fehler	\\ \hline\hline
-$59.5 eV$ Peak		& 0.0091		    & 0.0014 	\\ \hline
-$122.06 eV$ Peak	& 0.0257			& 0.0017	\\ \hline
-$136.47 eV$ Peak	& 0.026		     	& 0.004
+$59.5 keV$ Peak		& 0.0091		    & 0.0014 	\\ \hline
+$122.06 keV$ Peak	& 0.0257			& 0.0017	\\ \hline
+$136.47 keV$ Peak	& 0.026		     	& 0.004
 \end{tabular}\\}
  \caption{Energieauflösung Si}
 \end{table}
 
+\newpage
 Für die Energieauflösung konnten wir keine Literaturwerte finden.
 
 
 
 \subsection{Diskussion}\label{Diskussion}
 
+ Die Ergebnisse der Bandlückenenergien stimmen sowohl für Silizium als auch für Germanium innerhalb des Fehlers mit dem Literaturwert überein. Auffallend war, dass die aufgenommenen Spektren wider Erwarten nicht symmetrisch sind. Als Ursache vermuten wir hier eine Asymmetrie des Gitters, die durch Verkratzen und andere Beschädigungen entstanden sein kann. Da dies allerdings keine Auswirkungen auf den Schnittpunkt der im Rahmen der Auswertung gefitteten Geraden hat, war dies für die Auswertung nicht relevant. Bei der Auswertung haben wir außerdem die Fehler auf den x-Wert, die Energie der Photonen, die sich aus dem Winkel ergeben, vernachlässigt. Der Hauptgrund hierfür ist, dass diese gegenüber den y-Fehlern vernachlässigbar sind. Zudem wären diese nur schwer abschätzbar.\\
+ 
+ Bei der Messung der Parameter der freien Elektronen erzielten wir zum großen Teil sehr stark vom Literaturwert abweichende Ergebnisse. Lediglich die Beweglichkeit der freien Elektronen stimmte in der zweiten Messreihe innerhalb einer Standardabweichung mit dem Literaturwert überein, die Diffusionskonstante der ersten Messreihe immerhin innerhalb von drei Standardabweichungen. Alle weiteren Werte sind ziemlich weit vom Literaturwert entfernt. Besonders die Ergebnisse für die Lebenszeit der freien Elektronen weichen sehr stark vom Literaturwert ab. Dies liegt unter anderem daran, dass die Ladungsträger durch den Laserpuls sehr nah an der Oberfläche (durchschnittlich $0.5\mu m$) erzeugt werden. Hier treten starke Gitterdefekte auf, welche die Lebenszeit deutlich verkürzen.
+ 
+ Außerdem haben wir beobachtet, dass sich offenbar für die Messung der Diffusionskonstante die erste Messreihe und für die Messung der Beweglichkeit die zweite Messreihe deutlich besser eignet. Das bessere Ergebnis für die Beweglichkeit in der zweiten Messreihe könnte sein, dass das elektrische Feld keine perfekte Homogenität aufweist. Da wir in der zweiten Messreihe einen Fit über den Kehrwert der Spannung machen, spielen mögliche Inhomogenitäten möglicherweise eine kleinere Rolle.
+ 
+ Bei der zweiten Messreihe (siehe Abbildung \ref{wolken2}) sehen wir, dass der Verlauf der Amplituden eine sichtbare Abweichung vom erwarteten Exponentialverlauf darstellt. Dies erklärt zumindest teilweise die größere Abweichung bei der Berechnung der Diffusionskonstante, da diese sich aus dem Exponentialfit berechnet.\\
+ 
+ Beim Messen der Absorptionsrate in Teil III stimmt keiner der berechneten Werte im Rahmen des Fehlers mit dem Literaturwert überein. Der Wert für den Americium-Peak bei 59.5 keV stimmt immerhin noch innerhalb drei Standarabweichungen mit dem Literaturwert überein. Die schlechten Übereinstimmungen könnten an einer Inhomogenität der Proben liegen. Wenn die Proben nicht exakt an der gleichen Stelle über dem Detektor liegen erhalten wir nun unterschiedliche Emissionsraten, weshalb wir die Absorption der einzelnen Detektoren nicht miteinander vergleichen können. Außerdem traten bei der Messung des Cobalt-Spektrums wenig Counts auf, was den Fit erschwert und daher Ungenauigkeiten verursachen kann. Des Weiteren ist es möglich, dass die Angaben zu den Detektorflächen \cite{staat} falsch sind, was die Berechnung weiter verfälschen kann. 
+ 
+ Zu den Energieauflösungen gab es keinen Literaturwert, mit dem wir die Werte vergleichen konnten. Die Werte für die Cobalt-Peaks sind miteinander vertretbar, weichen allerdings deutlich von den Werten für den Americium-Peak abweichen. Die Abweichungen in diesem Versuchsteil können auch in der recht kurzen Messdauer begründet liegen, da sich die Spektren nicht sehr deutlich abzeichnen.
+ 
 
 \newpage
 \section{Anhang}
