@@ -207,7 +207,7 @@ mit:
 \end{itemize}
 
 \subsection{Geräte}
-
+\subsubsection{}
  
 \newpage
 \section[Versuchsaufbau- und Durchführung]{Versuchsaufbau- und Durchführung} 
@@ -297,14 +297,19 @@ Die von uns berechnete Bandlückenenergie von Silizium beträgt: $E_{\text{Si}}=
 \graTwo[0.49]{bandluecke_si_negativ}{bandluecke_si_positiv}{Nahaufnahmen des Silizium-Spektrums im a) negativen und b) positiven Bereich\label{speknahsi}}
 
 \subsection{Teil II: Ladungsträgerwolke in Germanium}
-\gra{teil3messreihe1}{Ladungsträgerwolken bei gleicher Spannung und unterschiedlichen Entfernungen\label{wolken1}}
-Wir haben für unterschiedliche Entfernungen die Ladungsträgerwolken mit dem Oszilloskop aufgenommen und an die einzelnen Datensätze eine Gaußkurve gefittet (siehe Abbildung \ref{wolken1}). Man erkennt hier bereits die exponentielle Abnahme der Amplitude mit der Zeit und die lineare Geschwindigkeit. Aus den Fitparametern $A$ und $\sigma$ sowie aus der Geschwindigkeit der Ladungsträgerwolke lassen sich nun die Lebenszeit, die Diffusionskonstante und die Beweglichkeit der freien Elektronen bestimmen. Die erwartete Verteilung der Elektronen ist:
+Im zweiten Teil des Versuchs haben wir Ladungsträgerwolken innerhalb des Halbleiters mit dem Oszilloskop aufgenommen. Die erwartete Verteilung der Elektronen ist:
 \begin{align*}
-	c(t,x)&=C\cdot\exp\left(-\frac t{\tau_e}\right)\cdot\frac1{\sqrt{4\pi D_et}}\cdot\exp\left(-\frac{(x-\mu_eEt)^2}{4D_et}\right)\\
-	&=A(t)\cdot\frac1{\sqrt{2\pi\sigma^2(t)}}\cdot\exp\left(-\frac{(x-x_c(t))^2}{2\sigma^2(t)}\right)
+c(t,x)&=C\cdot\exp\left(-\frac t{\tau_e}\right)\cdot\frac1{\sqrt{4\pi D_et}}\cdot\exp\left(-\frac{(x-\mu_eEt)^2}{4D_et}\right)\\
+&=A(t)\cdot\frac1{\sqrt{2\pi\sigma^2(t)}}\cdot\exp\left(-\frac{(x-x_c(t))^2}{2\sigma^2(t)}\right)
 \end{align*}
-Dabei ist $x_c$ die Entfernung zwischen Laserstrahl und Messspitze, $A(t)=C\cdot\exp\left(-\frac t{\tau_e}\right)$ ein Fitparameter und $\sigma(t)$ die Breite der gefitteten Gaußfunktion.\\
+Aus den Fitparametern $A$ und $\sigma$ sowie aus der Geschwindigkeit der Ladungsträgerwolke lassen sich nun die Lebenszeit, die Diffusionskonstante und die Beweglichkeit der freien Elektronen bestimmen. 
+Dabei ist $x_c$ die Entfernung zwischen Laserstrahl und Messspitze, $A(t)=C\cdot\exp\left(-\frac t{\tau_e}\right)$ die Amplitude und $\sigma(t)$ die Breite der gefitteten Gaußfunktion. Die Zeit $t$ nach der sich die Ladungsträgerwolke am Ort $x_c$ befindet, erhalten wir durch den Mittelwert $\mu$ der Gaußfunktion.
+
+Die Berechnungen in diesem Auswertungsteil wurden mit dem Skript \code{wolke.R} (siehe \ref{wolke}) durchgeführt.
+
 \subsubsection{Messungen bei fester Spannung}
+\gra{teil3messreihe1}{Ladungsträgerwolken bei gleicher Spannung und unterschiedlichen Entfernungen\label{wolken1}}
+Wir haben für unterschiedliche Entfernungen bei gleicher Spannung die Ladungsträgerwolken mit dem Oszilloskop aufgenommen und an die einzelnen Datensätze eine Gaußkurve gefittet (siehe Abbildung \ref{wolken1}). Man erkennt hier bereits die exponentielle Abnahme der Amplitude mit der Zeit und die lineare Geschwindigkeit. Die weiteren Parameter werden im Folgenden bestimmt.\\
 
 \gra{teil3x_t}{Die Entfernung zwischen Laserstrahl und Messspitze über der Zeit\label{xuebert}}
 
@@ -316,12 +321,12 @@ Dabei ist $x_c$ die Entfernung zwischen Laserstrahl und Messspitze, $A(t)=C\cdot
 \gra{teil3A_t}{Zeitliche Entwicklung des Fitparameters $A$\label{At}}
 \paragraph{Lebenszeit der freien Elektronen} Aus der zeitlichen Entwicklung des Fitparameters $A$ (siehe Abbildung \ref{At}) bestimmen wir die Lebenszeit $\tau_e$ der freien Elektronen. Der Parameter verhält sich folgendermaßen: $A(t)=C\cdot\exp\left(-\frac t{\tau_e}\right)$. Aus dem Exponentialfit erhalten wir nun für die Lebenszeit den Wert $\tau_e=(5.41\pm0.03)\cdot10^{-6}s$.
 
-\subsubsection{Messungen bei fester Spannung}
+\subsubsection{Messungen bei fester Entfernung}
+
 
 \gra{teil3messreihe2}{Ladungsträgerwolken bei gleicher Entfernung und unterschiedlichen Spannungen\label{wolken2}}
-Eine weitere Möglichkeit, die Beweglichkeit der Elektronen zu bestimmen, ist die Aufnahme von Ladungsträgerwolken bei fester Entfernung und verschiedenen Spannungswerten. 
 
-
+In der zweiten Messreihe Wir haben für unterschiedliche Spannungen bei gleicher Entfernung die Ladungsträgerwolken mit dem Oszilloskop aufgenommen und an die einzelnen Datensätze eine Gaußkurve gefittet (siehe Abbildung \ref{wolken2}). Man erkennt hier wiederum die exponentielle Abnahme der Amplitude mit der Zeit und die lineare Geschwindigkeit. Aus den Daten bestimmen wir nun erneut die Beweglichkeit, die Diffusionskonstante und die Lebenszeit der freien Elektronen.\\
 
 \gra{teil3U_t}{Kehrwert der Spannung über die Zeit\label{Ut}}
 \paragraph{Beweglichkeit der freien Elektronen} 
@@ -332,6 +337,13 @@ Aus $v_e=\mu_eE=\mu_e\frac{U}{l}$ folgt $\frac1U=\frac{\mu_e}{xl}t$. Über den l
 
 \gra{teil3A_t2}{Zeitliche Entwicklung des Fitparameters $A$\label{At2}}
 \paragraph{Lebenszeit der freien Elektronen} Wieder bestimmen wir aus der zeitlichen Entwicklung des Fitparameters $A$ (siehe Abbildung \ref{At2}) die Lebenszeit $\tau_e$ der freien Elektronen. Aus dem Exponentialfit an $A(t)=C\cdot\exp\left(-\frac t{\tau_e}\right)$ erhalten wir diesmal für die Lebenszeit den Wert $\tau_e=(2.8\pm0.5)\cdot10^{-6}s$.
+
+\subsection{Berechnungen der Fehler}
+Die Fehler auf die Ergebnisse haben wir über Gauß'sche Fehlerfortpflanzung aus den statistischen Fehlern auf die Fitparameter erhalten.
+\begin{align*}
+	s_y=\sqrt{\sum_{i=1}^N\left(\frac{\partial y}{\partial x_i}\cdot s_{x_i}\right)^2}
+\end{align*}
+
 \subsection{Teil III: Halbleiterdetektor}
 
 \subsubsection{Energiekalibrierung}
