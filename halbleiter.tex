@@ -97,11 +97,13 @@
 \pagenumbering{arabic} %verstecke Seitenzahl
 \section{Einleitung}
 
-In diesem Experiment soll in drei verschiedenen Versuchsteilen die Funktionsweise von Halbleitern und Halbleiterdetektoren untersucht werden. Silizium wird hier als Beispiel für einen reinen Halbleiter untersucht und Kadmiumtellurid als Beispiel für einen Verbindungshalbleiter.
-In \textbf{Teil I} des Versuchs wird die Bandlückenenergie von Silizium und Germanium, wichtiges Charakteristikum von Halbleitern, gemessen, die die Auflösung eines Halbleiterdetektors bestimmt. \\
-In \textbf{Teil II} des Versuchs,  dem Haynes-Shockley-Experiment, geht es um die Ausbreitung
-von einer durch einen gepulsten Laser erzeugten Ladungsträgerwolken im Halbleiter, die mit Hilfe eines Oszilloskops und einer Sonde beobachtet wird. An Hand zweier Messreihen werden die mittlere Lebensdauer $\tau_n$ die Diffusionskonstande $D_n$ und die Beweglichkeit $\mu_n$ bestimmt. In \textbf{Teil III} des Experiments werden mit Halbleiterdetektoren radioaktive Spektren aufgenommen und untersucht, wie gut sich Halbleiterdetektoren hierfür eignen. Hierzu wird die Absorptionsrate sowie die relative Energieauflösung eines CdTe- und eines Si-Halbleiterdetektors bestimmt.
-
+Wir untersuchen in diesem Experiment Halbleiter und die Funktionsweise von Halbleiterdetektoren in drei unabhängigen Versuchsteilen. Als Beispiel für elementare Halbleiter untersuchen wir Silizium und Germanium, als Beispiel für einen Verbindungshalbleiter untersuchen wir Kadmiumtellurid.
+\\
+In \textbf{Teil I} des Versuchs messen wir die Bandlückenenergie von Silizium und Germanium. Diese ist ein wichtiges Charakteristikum von Halbleitern, welches die Auflösung eines Halbleiterdetektors bestimmt.
+\\
+\textbf{Teil II} ist das Haynes-Shockley-Experiment. In diesem geht es um die Ausbreitung von Ladungsträgerwolken im Halbleiter, die durch einen gepulsten Laser erzeugt und mit Hilfe eines Oszilloskops und einer Sonde beobachtet werden. Anhand zweier Messreihen werden die mittlere Lebensdauer $\tau_e$ die Diffusionskonstante $D_e$ und die Beweglichkeit $\mu_e$ bestimmt.
+\\
+In \textbf{Teil III} nehmen wir mithilfe von Halbleiterdetektoren radioaktive Spektren und untersuchen die Eignung dieser Detektoren zur Aufnahme solcher Spektren. Hierzu bestimmen wir die Absorptionsrate sowie die relative Energieauflösung eines CdTe- und eines Si-Halbleiterdetektors.
 
 \newpage
 \section[Theoretische Grundlagen]{Theoretische Grundlagen}
@@ -118,7 +120,7 @@ Trifft eine ebene Welle auf einen Spalt, so ist nach dem Huygene'schen Prinzip j
 & n\cdot\lambda=d\cdot\sin(\theta)
 \end{align*}
 Hierbei ist $n$ die Beugungsordnung, $\theta$ der Einfallswinkel, $\lambda$ die Wellenlänge und $d$ der Spaltabstand.
-Man unterscheidet zwei Arten von optischen Gittern: Transmissionsgitter und Reflexionsgitter; Transmissionsgitter bestehen aus parallelen Spalten, Reflexionsgitter aus reflektierenden Graten. Hier handelt es sich um ein Reflexionsgiterr. Wir betrachten nun nur die erste Beugungsordnung. Für verschiedene Anstellwinkel des optischen Gitters ergibt sich die Energien der Photonen zu:
+Man unterscheidet zwei Arten von optischen Gittern: Transmissionsgitter und Reflexionsgitter; Transmissionsgitter bestehen aus parallelen Spalten, Reflexionsgitter aus reflektierenden Graten. Hier handelt es sich um ein Reflexionsgitter. Wir betrachten nun nur die erste Beugungsordnung. Für verschiedene Anstellwinkel des optischen Gitters ergibt sich die Energien der Photonen zu:
 
 \[E(\varphi)=\frac{hc}{2d\sin(\varphi)cos(\frac{\psi}{2})}\]
 
@@ -126,15 +128,15 @@ In \ref{4.1} wird genauer erklärt wie sich ein optisches Gitter so als Spektrom
 
 \subsection{Halbleiter}
 
-Materialen lassen sich an Hand der Eigenschaft der spezifischen elektrischen Leitfähigkeit $\rho$ in Isolatoren ($\rho \geq 10^8\Omega cm$), Halbleiter ($10^8\Omega cm \geq \rho \geq 10^-3 \Omega cm $)und Leiter ($\rho \leq 10^-3 \Omega cm$) unterteilen. Die elektrische Leitfähigkeit eines Materials hängt von der Anzahl der freien Ladungsträger ab. Die Leitfähigkeit von Halbleitern ist stark temperaturabhängig, so erwartet man theoretisch bei $0$K keine freien Ladungsträger, mit steigender Temperatur nimmt die Leitfähigkeit von Halbleitern zu. 
-Des weitern unterscheidet man zwischen elementarem Halbleitern, die aus nur einem Element bestehen, bekannte Beispiele sind hier Silizium und Germanium, und Verbindungshalbleitern, die aus einer Verbindung von wenigstens  zwei Elementen bestehen. 
+Materialien lassen sich an Hand der Eigenschaft der spezifischen elektrischen Leitfähigkeit $\rho$ in Isolatoren ($\rho \geq 10^8\Omega cm$), Halbleiter ($10^8\Omega cm \geq \rho \geq 10^-3 \Omega cm $)und Leiter ($\rho \leq 10^-3 \Omega cm$) unterteilen. Die elektrische Leitfähigkeit eines Materials hängt von der Anzahl der freien Ladungsträger ab. Die Leitfähigkeit von Halbleitern ist stark temperaturabhängig, so erwartet man theoretisch bei $0$K keine freien Ladungsträger, mit steigender Temperatur nimmt die Leitfähigkeit von Halbleitern zu. 
+Des weiteren unterscheidet man zwischen elementarem Halbleitern, die aus nur einem Element bestehen, bekannte Beispiele sind hier Silizium und Germanium, und Verbindungshalbleitern, die aus einer Verbindung von wenigstens  zwei Elementen bestehen. 
 
 \subsection{Das Bändermodell}
 
-Bei einem einzelnen Atome sind die Energieniveaus der Elektronen diskret. Nähert man nun zwei Atome so nah an, dass sich ihre Orbitale überlappen, müssen sich die Energieniveaus gemäß dem Pauliprinzip aufspalten. In einem Kristall wechseln nun der Art viele Atome miteinander, dass auf diese Art und Weise Energiebänder enstehen (s. Abbildung \ref{Bandlucke}). Das energetisch höchste Band, das im Grundzustand besetztist heißt Valenzband, das erste unbesetzte Band heißt Leitungsband. Der Energieabstand zwischen diesen beiden Bändern wird als Bandlücke bezeichnet. Bei $T = 0$K ist das Valenzband voll besetzt während im Leitungsband keine Ladungsträger sind. Durch Anlegen einer Spannung oder Absorption von Photonen können Elektronen jedoch in das Leiterband gelangen. 
+Bei einem einzelnen Atome sind die Energieniveaus der Elektronen diskret. Nähert man nun zwei Atome so nah an, dass sich ihre Orbitale überlappen, müssen sich die Energieniveaus gemäß dem Pauliprinzip aufspalten. In einem Kristall wechseln nun der Art viele Atome miteinander, dass auf diese Art und Weise Energiebänder entstehen (s. Abbildung \ref{Bandlucke}). Das energetisch höchste Band, das im Grundzustand besetzt ist heißt Valenzband, das erste unbesetzte Band heißt Leitungsband. Der Energieabstand zwischen diesen beiden Bändern wird als Bandlücke bezeichnet. Bei $T = 0$K ist das Valenzband voll besetzt während im Leitungsband keine Ladungsträger sind. Durch Anlegen einer Spannung oder Absorption von Photonen können Elektronen jedoch in das Leiterband gelangen. 
 
 \gra{Bandlucke}{Bändermodell des Halbleiters \label{Bandlucke}} \cite{staat}
-Die charakteristische Größe der Bandlückenenergie definiert ob ein Stoff ein Isolator, Halbleiter oder Leiter ist. Isolatoren haben eine besonders große Bandlüclenenergie, die mehrere $eV$ beträgt. Halbleiter haben typischerweise eine Bandlücke von weniger als einem $eV$, sie isolieren nur bei sehr niedrigen Temperaturen. Bereits thermische Anregungen reichen bei höheren Temperaturen für die Elektronen aus, um ins Leitungsband gehoben zu werden, Zurück bleibt bei diesem Vorgang ein positiv geladenes Loch, man spricht von einem Elektron-Loch-Paar. Bei Leitern überlappen sich beide Energiebänder, sodass stets genug Ladungsträger im Leitungsband sind, um einen Stromfluss zu gewährleisten.
+Die charakteristische Größe der Bandlückenenergie definiert ob ein Stoff ein Isolator, Halbleiter oder Leiter ist. Isolatoren haben eine besonders große Bandlückenenergie, die mehrere $eV$ beträgt. Halbleiter haben typischerweise eine Bandlücke von weniger als einem $eV$, sie isolieren nur bei sehr niedrigen Temperaturen. Bereits thermische Anregungen reichen bei höheren Temperaturen für die Elektronen aus, um ins Leitungsband gehoben zu werden, Zurück bleibt bei diesem Vorgang ein positiv geladenes Loch, man spricht von einem Elektron-Loch-Paar. Bei Leitern überlappen sich beide Energiebänder, sodass stets genug Ladungsträger im Leitungsband sind, um einen Stromfluss zu gewährleisten.
 
 \subsection{Bewegung von Ladungsträgern im Halbleiter}
 
@@ -142,7 +144,7 @@ Die charakteristische Größe der Bandlückenenergie definiert ob ein Stoff ein 
 
 \subsection{Direkte und indirekte Halbleiter}
 
-Untersucht man die Energien der Bänder in Abhängikeit des Impulses ergeben sich komplizierte Verläufe, aus denen sich eine natürliche Unterscheidung von Halbleitern ableiten lässt: Liegt das Maximum des Valenzbandes beim gleichen Impuls wie das Minimum des Leitungsbandes spricht man von direkten Halbleitern, liegen Maximum und Minimum bei verschiedenen Impulsen, spricht man von indirekten Halbleitern.
+Untersucht man die Energien der Bänder in Abhängigkeit des Impulses ergeben sich komplizierte Verläufe, aus denen sich eine natürliche Unterscheidung von Halbleitern ableiten lässt: Liegt das Maximum des Valenzbandes beim gleichen Impuls wie das Minimum des Leitungsbandes spricht man von direkten Halbleitern, liegen Maximum und Minimum bei verschiedenen Impulsen, spricht man von indirekten Halbleitern.
 
 \gra{(in)direkte_Halbleiter}{Direkte und indirekte Halbleiter}\cite{staat}
 Bei direkten Halbleitern können Elektronen einfach durch die Aufnahme der Bandlückenenergie (Übertrag durch ein Photon von ausreichender Energie $E_{Photon}=\hbar\omega\geq E_g$) ins Leitungsband gehoben werden während bei indirekten Halbleitern durch die Verschiebung der Extrema um $\Delta p$ ein Elektron zusätzlich zur Energieaufnahme auch noch seinen Impuls ändern muss. Dies geschieht durch Erzeugung bzw. Vernichtung von Phononen, d.h. Gitterschwingungen.
@@ -150,12 +152,12 @@ Bei direkten Halbleitern können Elektronen einfach durch die Aufnahme der Bandl
 \subsection{Extrinsische Halbleiter und Dotierung}
 
 In der Theorie wird meist von intrinsischen Halbleitern ausgegangen, also perfekten Kristallen ausgegangen.  Diese lassen sich allerdings technisch nicht erzeugen. Kristalldefekte, z.B.Beschädigte Elementarzellen, Verschiebung ganzer Kristallebenen oder die Verunreinigung durch Fremdatom beeinflussen die Kristallstruktur und können zur Bildung von Energieniveaus innerhalb der Bandlücken führen, was einen nicht zu vernachlässigenden Effekt auf die Elektronen-Loch-Rekombination hat, und somit die Leitfähigkeit beeinflusst.\\
-Normalerweise geht ein Halbleiteratom Bindungen mit vier Nachbaratomen ein. Bei der Verunreinigung mit Fremdatomen z.B. Phosphor mit fünf Valenzelektronen oder Aluminium mit drei Valenzelektronen steht ein quasi-freier Ladungsträger zur Verfügung: Bei Phosphor ist dies das fünfte, schwachgebundene Elektron, bei Aluminium steht ein zusätzliches Loch als Ladungsträger zur Verfügung. Bei Fremdatome, die ein zusätzliches Elektron beisteuern, wie in diesem Beispiel Phosphor, spricht man von Donatoren. Bei solchen, die ein zusätzliches Loch beisteuern, wie hier Aluminium, spricht man von Akzeptoren.
+Normalerweise geht ein Halbleiteratom Bindungen mit vier Nachbaratomen ein. Bei der Verunreinigung mit Fremdatomen z.B. Phosphor mit fünf Valenzelektronen oder Aluminium mit drei Valenzelektronen steht ein quasi-freier Ladungsträger zur Verfügung: Bei Phosphor ist dies das fünfte, schwach gebundene Elektron, bei Aluminium steht ein zusätzliches Loch als Ladungsträger zur Verfügung. Bei Fremdatome, die ein zusätzliches Elektron beisteuern, wie in diesem Beispiel Phosphor, spricht man von Donatoren. Bei solchen, die ein zusätzliches Loch beisteuern, wie hier Aluminium, spricht man von Akzeptoren.
 Oft wird diese Verunreinigung absichtlich vorgenommen (typischerweise ca. 1 Fremdatom auf $10^6$Atome), da sie sich positiv auf die Leitfähigkeit des Halbleiters auswirken kann. Diesen Vorgang nennt man Dotierung. Donatoren-Halbleiter nennt man n-Typ, Akzeptor-Halbleiter heißen p-Typ.
 \subsection{Halbleiter-Diode}
 
-Bringt man eine Schicht n-Typ-Halbleiter und eine Schicht p-Typ-Halbleiter zusammen, spricht man von einer Diode. Die quasie-freien Ladungsträger der n-Typ-Schicht, d.h. die Elektronen, diffundieren in die freien Löcher der p-Typ-Schicht. Im Übergangsbereich löschen sich die freien Ladungsträger also durch diesen Vorgang aus. 
-Nach diesem Diffusionsprozess bleiben in der n-Typ-Schicht positiv geladene Ionen und in der p-Typ-Schicht negativ geladene Ionen zurück (Verarmungszone), die sich nicht frei bewegen können, da sie in die Gitterstruktur des Kristalls fest eingebunden sind. Es ensteht so ein elektrisches Feld (Kontakt-Potential mit Spannung $U_{bi}$), wie in Abbildung 3 zu sehen ist. 
+Bringt man eine Schicht n-Typ-Halbleiter und eine Schicht p-Typ-Halbleiter zusammen, spricht man von einer Diode. Die quasi-freien Ladungsträger der n-Typ-Schicht, d.h. die Elektronen, diffundieren in die freien Löcher der p-Typ-Schicht. Im Übergangsbereich löschen sich die freien Ladungsträger also durch diesen Vorgang aus. 
+Nach diesem Diffusionsprozess bleiben in der n-Typ-Schicht positiv geladene Ionen und in der p-Typ-Schicht negativ geladene Ionen zurück (Verarmungszone), die sich nicht frei bewegen können, da sie in die Gitterstruktur des Kristalls fest eingebunden sind. Es entsteht so ein elektrisches Feld (Kontakt-Potential mit Spannung $U_{bi}$), wie in Abbildung 3 zu sehen ist. 
 
 \gra{n-p-Diode}{Halbleiter-Diode} \cite{staat}
 
@@ -164,14 +166,14 @@ Dies bildet die Grundlage für Halbleiterdetektoren. Die Grundidee von Halbleite
 \subsection{Wechselwirkung von Strahlung mit Materie \cite{anleitungkhwz}}
 
 Die Wechselwirkung von Strahlung mit Materie wird im Wesentlichen durch drei verschiedene Effekte beschrieben: \textbf{Photoeffekt}, \textbf{Comptoneffekt} und \textbf{Paarbildung}.
-Der Effekt der Paarbildung tritt für Energien über $1,022$ MeV auf, die in diesen Versuchen nicht erreicht werden, sodass wir diesen Effekt hier nicht weier erläutern.
+Der Effekt der Paarbildung tritt für Energien über $1,022$ MeV auf, die in diesen Versuchen nicht erreicht werden, sodass wir diesen Effekt hier nicht weiter erläutern.
 
 \paragraph{Photoeffekt} Man unterscheidet beim Photoeffekt zwischen innerem und äußerem Photoeffekt.
 Beim Photoeffekt dringt ein Photon in das Atom ein und überträgt seine gesamte Energie an ein Elektron der inneren Schalen. Dabei wird Energie auf dieses Elektron übertragen. Ist die Energie des Photons größer als die Bindungsenergie des Elektrons wird es aus der Atomhülle befreit und erhält kinetische Energie. Die hier entstandene Lücke wird über Abstrahlung eines $\gamma$-Quants oder eines Auger-Elektrons wieder gefüllt. Man spricht vom äußeren Photoeffekt.
-Beim inneren Photoeffekt treffen Photonen mit einer Energie  $\geq E_g$ auf ein Elektron, und heben dieses vom Valenzband in das Leiterband. Hier durch wird die Leitfäjigkeit des Halbleiters erhöht.
+Beim inneren Photoeffekt treffen Photonen mit einer Energie  $\geq E_g$ auf ein Elektron, und heben dieses vom Valenzband in das Leiterband. Hier durch wird die Leitfähigkeit des Halbleiters erhöht.
 \paragraph{Comptoneffekt} Beim Compton-Effekt trifft ein einfallendes Photon auf ein freies oder nur leicht gebundenes Elektron und überträgt einen Teil seiner Energie bzw. seines Impulses auf dieses und verliert selber an Energie in dem die Wellenlänge erhöht wird. Die Stärke dieses Effektes hängt vom Emissionswinkel ab, gestreute Photonen können weiter mit anderen Elektronen wechselwirken, beispielsweise in Form des inneren Photoeffekts. Dieser Prozess findet meist bei Energien zwischen $200$ keV und $5$ MeV statt.
 
-Trifft hochenergetische Strahlung, z.B. in Form eines Lasers, auf einen Halbleiter, ensteht durch die oben beschriebenen Effekte eine Ladungsträgerwolke.
+Trifft hochenergetische Strahlung, z.B. in Form eines Lasers, auf einen Halbleiter, entsteht durch die oben beschriebenen Effekte eine Ladungsträgerwolke.
 
 In Materie fällt die Intensität $I_d$ der $\gamma$-Strahlung exponentiell mit der Strecke $d$ ab:
 \[I_d=e^{\mu d}\]
@@ -179,13 +181,13 @@ Dabei ist $\mu$ der Absorptionskoeffizent des Materials und $I_0$ die Anfangsint
 
 \subsection{Theorie zum Haynes-Shockley Experiment}
 \label{teil3theorie}
-Im zweiten Veruchsteil des Experiments wird ein Laserpuls auf eine Germaniumprobe geschossen, wodurch eine Ladungswolke ensteht.Um das Verhalten dieser Ladungsträgerwolke zu beschreiben stellen wir folgende Überlegungen an: Aus der Kontinuitätsgleichung $\vec{\nabla}\vec{j}+\dot{n}=0$ und zusätzlichen Rekombinationen (siehe \cite{staat}), ergibt sich:
+Im zweiten Versuchsteil des Experiments wird ein Laserpuls auf eine Germaniumprobe geschossen, wodurch eine Ladungswolke entsteht.Um das Verhalten dieser Ladungsträgerwolke zu beschreiben stellen wir folgende Überlegungen an: Aus der Kontinuitätsgleichung $\vec{\nabla}\vec{j}+\dot{n}=0$ und zusätzlichen Rekombinationen (siehe \cite{staat}), ergibt sich:
 \begin{align*}
 &\frac{\partial n}{\partial t}=-\vec{\nabla}\vec{j_n}\frac{n-n_o}{\tau_n}=\vec{E}\mu_n\vec{\nabla}n+D_n\triangle n-\frac{n-n_o}{\tau_n}&\mbox{(analog für die Löcher)}
 \end{align*}
 wobei  $\tau_n$ die  Rekombinationszeit ist und $n_0,p_0$ sind die Grundkonzentrationen, für die gilt: $n(\vec{x})=n_0+\bar{n}(\vec{x})$
 
-Diese Differentialgleichung ist gekoppelt. Wir vereinfachen sie daher durch Einfhren allgemeiner Größen zu einer entkoppelten DGL:
+Diese Differentialgleichung ist gekoppelt. Wir vereinfachen sie daher durch Einführen allgemeiner Größen zu einer entkoppelten DGL:
 \[\frac{\partial c}{\partial t}=\mu\vec{E}\cdot\nab c+D\triangle c-\frac{c-c_0}{\tau}\]
 wobei :
 \begin{itemize}
@@ -229,7 +231,7 @@ Zunächst wird der Strahlengang überprüft und alle Geräte so justiert, dass d
 
 \gra{TeilII_Aufbau}{Versuchsaufbau Teil II: Bewegung der Ladungsträgerwolke}\label{Aufbau2}
 
-In Abbildung \ref{Aufbau2} ist der Versuchsaufbau zum Haynes-Shockley-Versuch zu sehen. Licht eines gepulstes Lasers wird hier durch ein Glasfaserkabel auf eine Germaniumprobe ($40\times 40\times 300\mathrm{mm}^3$, p-dotiert) geleitet.  Hierdurch ensteht eine Ladungsträgerwolke, welche durch die angelegte Spannung $U$ durch den Halbleiter wandert. Wir beobachten diese Wolke mit Hilfe eines Oszilloskops und einer Sonde.
+In Abbildung \ref{Aufbau2} ist der Versuchsaufbau zum Haynes-Shockley-Versuch zu sehen. Licht eines gepulstes Lasers wird hier durch ein Glasfaserkabel auf eine Germaniumprobe ($40\times 40\times 300\mathrm{mm}^3$, p-dotiert) geleitet.  Hierdurch entsteht eine Ladungsträgerwolke, welche durch die angelegte Spannung $U$ durch den Halbleiter wandert. Wir beobachten diese Wolke mit Hilfe eines Oszilloskops und einer Sonde.
 Um ordentlich messen zu können, ist es erforderlich, dass die Frequenz des gepulsten Lasers und die des Oszilloskops synchronisiert sind, was über die Verbindung des Trigger-Eingangs des Oszilloskops mit dem Laser bezweckt wird.
 
 Da die Probe wieder abkühlen muss, ist die Spannung $U$ nicht konstant. Viel mehr werden $98\%$ der Zeit einer Periode für das Abkühlen der Probe verwendet während der eigentliche Prozess in den restlichen $2\%$ der Zeit stattfindet.
@@ -243,7 +245,7 @@ In diesem Teil werden zwei verschiedene Messreihen aufgenommen. In einer ersten 
 \subsubsection{Aufbau}
 \gra{TeilIII_Aufbau}{Versuchsaufbau Teil III: Halbleiterdetektoren}
 
-Kernstück dieses Versuchsaufbaus ist der Halbleiterdetektor. Es stehen für diesen Versuchsteil zwei verscheidene Halbleiterdetektoren zur Verfügung:
+Kernstück dieses Versuchsaufbaus ist der Halbleiterdetektor. Es stehen für diesen Versuchsteil zwei verschiedene Halbleiterdetektoren zur Verfügung:
 
 \begin{itemize}
 	\item Eine $n-n^+$-Silizium-Diode
@@ -343,18 +345,20 @@ Die Fehler auf die Ergebnisse haben wir über Gauß'sche Fehlerfortpflanzung aus
 \begin{align*}
 	s_y=\sqrt{\sum_{i=1}^N\left(\frac{\partial y}{\partial x_i}\cdot s_{x_i}\right)^2}
 \end{align*}
-
+\newpage
 \subsection{Teil III: Halbleiterdetektor}
 
 \subsubsection{Energiekalibrierung}
 
-Anhand der aufgenommenen Spektren werden zunächst Energiekalibrierungen vorgenommen. Dafür werden in den aufgenommenen Spektren die Peaks der Zerfälle mit bekannten Energien ($59.5$ keV für $^{241}$Am und $122$ keV bzw. $136.5$ keV für $^{57}$Co) zunächst Gauß-gefittet (siehe ). Dies geschieht für den CdTe-Detektor und den Si-Detektor sowie die jeweiligen Proben getrennt. 
+Anhand der aufgenommenen Spektren werden zunächst Energiekalibrierungen vorgenommen. Dafür werden in den aufgenommenen Spektren die Peaks der Zerfälle mit bekannten Energien ($59.5$ keV für $^{241}$Am und $122$ keV bzw. $136.5$ keV für $^{57}$Co) zunächst Gauß-gefittet (siehe Abbildung \ref{cdte} und Abbildung \ref{si}). Dies geschieht für den CdTe-Detektor und den Si-Detektor sowie die jeweiligen Proben getrennt. 
 Beim Identifizieren der Peaks ist zu berücksichtigen, dass es durch verschiedene Effekte, die z.B. mit dem Compton-Effekt und dem Photoeffekt zu tun haben, besonders im Anfangsbereich zu einem starken Untergrund kommt. So führen Wechselwirkungen über den Compton-Effekt beispielsweise dazu, dass die gestreuten Photonen Einträge in einem weiten Bereich des Spektrums verursachen können und zwar bis zur sogenannten Compton-Kante, die der maximalen Energie eines gestreuten Photons entspricht (d.h. Streuwinkel von 180°). 
 
-\gra{Am_CdTE_Teil3}{CdTe-Detektor: $59.5$ keV Peak von $^{241}$Am  }
-\gra{Co_CdTe_Teil3}{CdTe-Detektor: $122$ keV bzw. $136.5$ keV von $^{57}$Co}
-\gra{Am_Si_Teil3}{Si-Detektor: $59.5$ keV Peak von $^{241}$Am }
-\gra{Co_Si_Teil3}{Si-Detektor: $122$ keV bzw. $136.5$ keV von $^{57}$Co}
+%\gra{Am_CdTE_Teil3}{CdTe-Detektor: $59.5$ keV Peak von $^{241}$Am  }
+%\gra{Co_CdTe_Teil3}{CdTe-Detektor: $122$ keV bzw. $136.5$ keV von $^{57}$Co}
+%\gra{Am_Si_Teil3}{Si-Detektor: $59.5$ keV Peak von $^{241}$Am }
+%\gra{Co_Si_Teil3}{Si-Detektor: $122$ keV bzw. $136.5$ keV von $^{57}$Co}
+\graTwo[0.49]{Am_CdTE_Teil3}{Co_CdTe_Teil3}{CdTe-Detektor: a) $59.5$ keV Peak von $^{241}$Am und b) $122$ keV bzw. $136.5$ keV von $^{57}$Co\label{cdte}}
+\graTwo[0.49]{Am_Si_Teil3}{Co_Si_Teil3}{Si-Detektor: a) $59.5$ keV Peak von $^{241}$Am und b) $122$ keV bzw. $136.5$ keV von $^{57}$Co\label{si}}
 
 \newpage
 
@@ -416,7 +420,7 @@ Energiekalibrierung&
 
 \subsubsection{Absorptionsrate}
 
-Wir wollen in einem nächsten Schritt nun die Absorptionsrate der Detektoren berechnen, die sich aus dem Verhätnis der Vorfaktoren $C$ des Gaußfits berechnet, wobei die Absorptionsflächen der Detektoren $a_{Si}=100mm^2$ $a_{CdTe}=23mm^2$ zu berücksichtigen sind:
+Wir wollen in einem nächsten Schritt nun die Absorptionsrate der Detektoren berechnen, die sich aus dem Verhältnis der Vorfaktoren $C$ des Gaußfits berechnet, wobei die Absorptionsflächen der Detektoren $a_{Si}=100mm^2$ $a_{CdTe}=23mm^2$ zu berücksichtigen sind:
 
 \begin{align*}
 r&=\frac{C_{Si}a_{CdTe}}{C_{CdTe}a{Si}}\\
